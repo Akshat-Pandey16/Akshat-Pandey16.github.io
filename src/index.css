@@ -1,0 +1,28 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.text-10xl {
+       font-size: 10rem;
+       line-height: 1.2; /* Adjust line height as needed */
+       color: #00E9A0;
+}
+     
+.text-11xl {
+       font-size: 11rem;
+       line-height: 1.2;
+       color: #00E9A0;
+}
+     
+.text-12xl {
+       font-size: 12rem;
+       line-height: 1.2;
+}
+
+/* styles.css or App.css */
+body {
+       margin: 0;
+       padding: 0;
+}
+
