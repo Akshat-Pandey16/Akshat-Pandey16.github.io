@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
-import Img from '../assets/Vector.svg';
+import Img from '../assets/Landing.svg';
 import '../fonts.css';
 import Switcher from '../components/Slider';
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Img from '../assets/Internships.svg';
-import Img1 from '../assets/Internships1.svg';
-import SAIL from '../assets/SAIL.png';
-import DRDO from '../assets/DRDO.png';
+import Img from '../assets/internships/Internships.svg';
+import Img1 from '../assets/internships/Internships1.svg';
+import SAIL from '../assets/internships/SAIL.png';
+import DRDO from '../assets/internships/DRDO.png';
 import Navbar from '../components/Navbar';
 
 const Internships: React.FC = () => {

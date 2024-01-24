@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import Img from '../assets/Skills.svg';
-import Img1 from '../assets/Skills1.svg';
+import Img from '../assets/skills/Skills.svg';
+import Img1 from '../assets/skills/Skills1.svg';
 import Navbar from '../components/Navbar';
-import LoaderImage from '../assets/loader.webp';
+import cpp from '../assets/skills/cpp.png';
+import Python from '../assets/skills/python.png'
+import linux from '../assets/skills/linux.png';
+import flutter from '../assets/skills/flutter.png';
+import sql from '../assets/skills/sql.png';
+import react from '../assets/skills/react.png';
+import fastapi from '../assets/skills/fastapi.png';
 
 const commonBoxStyle = "bg-green-100 rounded-3xl h-48 w-48 m-20 border-4 border-green-500 hover:opacity-80 transition-all shadow-md shadow-green-400 hover:scale-110 duration-500 relative overflow-hidden";
 const commonImageStyle = "w-full h-full object-fit rounded-3xl p-3";
@@ -22,13 +28,13 @@ const Skills: React.FC = () => {
   ];
 
   const images = [
-    LoaderImage,
-    LoaderImage,
-    LoaderImage,
-    LoaderImage,
-    LoaderImage,
-    LoaderImage,
-    LoaderImage,
+    cpp,
+    Python,
+    linux,
+    flutter,
+    sql,
+    react,
+    fastapi,
   ];
 
   const handleHover = (boxNumber: number) => {
