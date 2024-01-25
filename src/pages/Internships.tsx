@@ -18,7 +18,7 @@ const Internships: React.FC = () => {
   };
 
   return (
-    <div id="internships" className="flex flex-col items-center justify-center min-h-screen bg-gray-950 relative">
+    <div id="internships" className="flex flex-col border-y-2 border-green-300 items-center justify-center min-h-screen bg-gray-950 relative">
       <Navbar />
       <div className="flex flex-box justify-center items-center absolute top-16 left-24">
         <h1 className="text-white text-8xl mt-10">Internships.</h1>

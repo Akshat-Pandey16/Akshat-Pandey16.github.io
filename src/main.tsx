@@ -6,6 +6,8 @@ import About from './pages/About'
 import Internships from './pages/Internships'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
+import Hire from './pages/Hire'
+import Contact from './pages/Contact'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -15,5 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Internships />
     <Projects />
     <Skills />
+    <Hire />
+    <Contact />
   </React.StrictMode>,
 )

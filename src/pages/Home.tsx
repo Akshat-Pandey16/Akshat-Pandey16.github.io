@@ -7,13 +7,16 @@ import Switcher from '../components/Slider';
 const commonButtonClass =
   'text-gray-700 text-bold text-2xl bg-green-100 px-20 py-5 rounded-full flex items-center justify-center hover:bg-white hover:text-green-400 transition-transform transform-gpu hover:scale-110 shadow-lg shadow-green-500 border-4 border-green-600 shadow-md duration-500';
 
+const commonButtonClass1 = 
+  'w-6 h-6 mr-2';
+
 const sectionButtons = [
-  { id: 'about', text: 'ABOUT ME', icon: <FaInfo className="w-6 h-6 mr-2" /> },
-  { id: 'internships', text: 'EXPERIENCE', icon: <FaBuilding className="w-6 h-6 mr-2" /> },
-  { id: 'projects', text: 'PROJECTS', icon: <FaLaptopCode className="w-6 h-6 mr-2" /> },
-  { id: 'skills', text: 'SKILLS', icon: <FaCode className="w-6 h-6 mr-2" /> },
-  { id: 'hireme', text: 'WHY HIRE ME?', icon: <FaArrowRight className="w-6 h-6 mr-2" /> },
-  { id: 'contact', text: 'CONTACT ME', icon: <FaEnvelope className="w-6 h-6 mr-2" /> },
+  { id: 'about', text: 'ABOUT ME', icon: <FaInfo className={commonButtonClass1} /> },
+  { id: 'internships', text: 'EXPERIENCE', icon: <FaBuilding className={commonButtonClass1} /> },
+  { id: 'projects', text: 'PROJECTS', icon: <FaLaptopCode className={commonButtonClass1} /> },
+  { id: 'skills', text: 'SKILLS', icon: <FaCode className={commonButtonClass1} /> },
+  { id: 'hireme', text: 'WHY HIRE ME?', icon: <FaArrowRight className={commonButtonClass1} /> },
+  { id: 'contact', text: 'CONTACT ME', icon: <FaEnvelope className={commonButtonClass1} /> },
 ];
 
 const Landing: React.FC = () => {

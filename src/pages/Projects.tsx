@@ -37,18 +37,18 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div id="projects" className="flex flex-wrap gap-4 items-center justify-center min-h-screen bg-gray-950 relative">
+    <div id="projects" className="flex border-y-2 border-green-300 flex-wrap gap-4 items-center justify-center min-h-screen bg-gray-950 relative">
       <Navbar />
       {/* First Row */}
       {[0, 1, 2].map((index) => (
-        <div key={index} className={`flex z-50 items-center justify-center mt-24 ${index === 2 ? 'mr-32' : 'mr-10'} ${index === 2 && 'z-30'}`}>
+        <div key={index} className={`flex z-50 items-center justify-center mt-8 ${index === 2 ? 'mr-32' : 'mr-10'} ${index === 2 && 'z-30'}`}>
           <ProjectBox title={projectData[index].title} image={projectData[index].image} />
         </div>
       ))}
 
       {/* Second Row */}
       {[3, 4].map((index) => (
-        <div key={index} className={`flex items-center justify-center mt-[-24px] ${index === 3 ? 'mr-80' : 'ml-40 mr-28'} z-30`}>
+        <div key={index} className={`flex items-center justify-center mt-[-96px] ${index === 3 ? 'mr-80' : 'ml-40 mr-28'} z-30`}>
           <ProjectBox title={projectData[index].title} image={projectData[index].image} />
         </div>
       ))}

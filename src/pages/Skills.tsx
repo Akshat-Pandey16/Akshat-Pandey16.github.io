@@ -46,7 +46,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <div id="skills" className="flex flex-col items-center justify-center min-h-screen bg-gray-950 relative">
+    <div id="skills" className="flex flex-col border-y-2 border-green-300 items-center justify-center min-h-screen bg-gray-950 relative">
       <Navbar />
 
       {/* First Row */}
@@ -69,12 +69,12 @@ const Skills: React.FC = () => {
       </div>
 
       {/* Header */}
-      <div className="flex flex-box justify-center items-center absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-all duration-500">
-        <h1 className="text-white text-7xl mt-10">Skills.</h1>
+      <div className="z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500">
+        <h1 className="text-white text-7xl">Skills.</h1>
       </div>
 
       {/* Second Row */}
-      <div className="flex flex-box justify-center items-center absolute mt-14 top-1/3 left-1/2 transform -translate-x-1/2 transition-all duration-500">
+      <div className="z-50 flex flex-box justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 transition-all duration-500">
         <div className="flex">
           {[5, 6, 7].map((boxNumber) => (
             <div
@@ -96,7 +96,7 @@ const Skills: React.FC = () => {
       <div className="flex flex-box justify-center items-center absolute top-0 right-80 mr-52">
         <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
-      <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-1/2">
+      <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-3/5">
         <img src={Img1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
     </div>
