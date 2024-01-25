@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 Skills{' '}
               </button>
               <button
-                onClick={() => scrollToSection('hire')}
+                onClick={() => scrollToSection('hireme')}
                 className={`mr-3 ${commonPillClass} bg-green-100`}
               >
                 Why Hire Me?{' '}

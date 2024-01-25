@@ -23,7 +23,7 @@ const Switcher: React.FC<SwitcherProps> = ({ position }) => {
       case 'right':
         return 'right-20';
       default:
-        return 'left-4';
+        return 'left-20';
     }
   };
 
