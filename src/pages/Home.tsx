@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
-import Img from '../assets/Landing.svg';
+import Img from '../assets/Home.svg';
 import Switcher from '../components/Slider';
 
 const commonButtonClass =
@@ -18,7 +18,7 @@ const sectionButtons = [
   { id: 'contact', text: 'CONTACT ME', icon: <FaEnvelope className={commonButtonClass1} /> },
 ];
 
-const Landing: React.FC = () => {
+const Home: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
 
@@ -72,4 +72,4 @@ const Landing: React.FC = () => {
   );
 };
 
-export default Landing;
+export default Home;
