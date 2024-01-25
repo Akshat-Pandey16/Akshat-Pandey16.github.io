@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
 import Img from '../assets/Landing.svg';
-import '../fonts.css';
 import Switcher from '../components/Slider';
 
 const commonButtonClass =
@@ -35,7 +34,7 @@ const Landing: React.FC = () => {
       <Switcher position="center" />
       <img src={Img} alt="Img" className="h-4/5 z-20" />
 
-      <div className="absolute top-[11%] left-0 right-0 p-4 text-center text-white bg-opacity-75 z-10 transition-transform transform-gpu hover:animate-pulse">
+      <div className="absolute top-[11%] left-0 right-0 p-4 text-center z-10 transition-transform transform-gpu">
         <h2 className="text-10xl tracking-widest">
           <span className="mr-12">AKSHAT</span>
           <span className="ml-12">PANDEY</span>

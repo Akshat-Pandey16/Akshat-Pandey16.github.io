@@ -19,7 +19,7 @@ const Hire: React.FC = () => {
         </p>
       </div>
 
-      <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-1/3">
+      <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/5">
         <img src={Img} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-4/5">
