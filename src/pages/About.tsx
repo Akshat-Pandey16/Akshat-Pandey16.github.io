@@ -8,10 +8,13 @@ const About: React.FC = () => {
   return (
     <div id="about" className="flex flex-col items-center justify-center min-h-screen border-y-2 border-green-300 bg-gray-950 relative">
       <Navbar />
-      <div className='flex flex-box justify-center items-center absolute bottom-24 left-24'>
-        <h1 className="text-white text-9xl">About Me.</h1>
+      <div className='flex flex-box flex-col justify-center items-center absolute bottom-24 left-40'>
+        <h1 className="text-white text-8xl mb-4">About Me!</h1>
+        <p className="text-gray-300 text-2xl text-center">
+          See what I cherry picked about myself!
+        </p>
       </div>
-      <div className='flex flex-box justify-center items-center absolute top-24 left-24 mr-24 max-w-[700px]'>
+      <div className='flex flex-box justify-center items-center absolute top-24 left-32 mr-24 max-w-[700px]'>
         <p className="text-white text-4xl mt-14">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, dolore omnis magni assumenda optio atque,
           pariatur maiores quas consectetur adipisci placeat consequatur suscipit, at voluptas! Voluptatum maiores

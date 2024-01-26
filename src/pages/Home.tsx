@@ -32,12 +32,12 @@ const Home: React.FC = () => {
   return (
     <div id="home" className="relative flex flex-col items-center justify-end h-screen bg-gray-950 border-b-4 border-green-300">
       <Switcher position="center" />
-      <img src={Img} alt="Img" className="h-4/5 z-20" />
+      <img src={Img} alt="Img" className="h-5/6 z-20" />
 
-      <div className="absolute top-[11%] left-0 right-0 p-4 text-center z-10 transition-transform transform-gpu">
-        <h2 className="text-10xl tracking-widest">
-          <span className="mr-12">AKSHAT</span>
-          <span className="ml-12">PANDEY</span>
+      <div className="absolute top-[13%] text-center z-10 transition-transform transform-gpu">
+        <h2 className="text-9xl text-emerald-300 tracking-widest">
+          <span className="mr-12">//AKSHAT</span>
+          <span className="ml-12">PANDEY//</span>
         </h2>
       </div>
 
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     <button
       key={button.id}
       onClick={() => scrollToSection(button.id)}
-      className={`mb-14 ${index === 0 || index === 2? 'translate-x-24' : 'translate-x-14'} ${commonButtonClass}`}
+      className={`mb-14 ${index === 0 || index === 2? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
     >
       {button.icon} {button.text}
     </button>
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
     <button
       key={button.id}
       onClick={() => scrollToSection(button.id)}
-      className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-28' : '-translate-x-14'} ${commonButtonClass}`}
+      className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
     >
       {button.icon} {button.text}
     </button>
