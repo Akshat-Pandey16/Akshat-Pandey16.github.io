@@ -19,7 +19,7 @@ const Hire: React.FC = () => {
     <div id="contact" className="flex flex-col items-center justify-center min-h-screen border-y-2 border-emerald-300 bg-gray-950 relative">
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-24'>
-        <h1 className="text-white text-8xl mb-4">Get in Touch!</h1>
+        <h1 className="b text-white text-8xl mb-4">Get in Touch!</h1>
         <p className="text-gray-300 text-2xl text-center">
           Ask me why I love rounded corners so much!
         </p>

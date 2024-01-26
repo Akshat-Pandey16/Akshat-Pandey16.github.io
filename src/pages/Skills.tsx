@@ -58,7 +58,7 @@ const Skills: React.FC = () => {
 
       {/* Header */}
       <div className="z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500">
-        <h1 className="text-white text-7xl">Skills.</h1>
+        <h1 className="b text-white text-7xl">Skills.</h1>
       </div>
 
       {/* Second Row */}
