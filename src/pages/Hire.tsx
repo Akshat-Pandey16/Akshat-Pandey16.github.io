@@ -9,7 +9,7 @@ const Hire: React.FC = () => {
     <div id="hireme" className="flex flex-col items-center justify-center min-h-screen border-y-2 border-green-300 bg-gray-950 relative">
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-32'>
-        <h1 className="text-white text-7xl mb-4">Get in Touch!</h1>
+        <h1 className="text-white text-7xl mb-4">Why Hire Me?</h1>
         <p className="text-gray-300 text-2xl text-center">
           I would be a good fit for your team! Or thats what my mother says!
         </p>
