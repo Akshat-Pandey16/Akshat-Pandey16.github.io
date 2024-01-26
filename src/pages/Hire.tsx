@@ -16,11 +16,10 @@ const Hire: React.FC = () => {
       </div>
       <div className='flex flex-box justify-center items-center absolute bottom-44 right-24 max-w-[900px]'>
         <p className="text-white text-3xl">
-          This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this horrendously designed website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
+          This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
           Yes this paragraph is shifted to right and I am not sure why I did that. But I am sure I can shift your buisness to the right direction! (This line was definitely not written by ChatGPT)
         </p>
       </div>
-
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/5">
         <img src={Img} alt="Img" className="w-full h-full object-cover z-20" />
       </div>

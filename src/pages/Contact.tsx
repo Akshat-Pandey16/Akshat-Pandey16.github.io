@@ -8,7 +8,7 @@ import Img1 from '../assets/Contact1.svg';
 const Hire: React.FC = () => {
   const boxesData = [
     { icon: <FaFileDownload />, text: 'Download Resume', link: 'https://drive.google.com/file/d/1xroePlfuRA74yIozn3-nwg-p4wMXZfrL/view?usp=sharing' },
-    { icon: <FaGithub />, text: 'GitHub', link: 'https://github.com/Akshat-Pandey16' },
+    { icon: <FaGithub />, text: 'Github', link: 'https://github.com/Akshat-Pandey16' },
     { icon: <FaLinkedin />, text: 'LinkedIn', link: 'https://www.linkedin.com/in/akshat-pandey-001a53147/' },
     { icon: <FaEnvelope />, text: 'Email', link: 'mailto:akshat16pandey@gmail.com' },
   ];
