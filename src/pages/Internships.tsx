@@ -72,7 +72,7 @@ const Internships: React.FC = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-50">
           <div className="bg-green-100 border-4 border-green-600 p-8 rounded-2xl shadow-md shadow-green-500">
             <p>Pop-up window content goes here</p>
-            <button onClick={handleClosePopup} className="bg-red-500 text-white px-4 py-2 rounded-full mt-4">
+            <button onClick={handleClosePopup} className="bg-red-400 text-white px-4 py-2 rounded-full mt-4">
               Close
             </button>
           </div>
