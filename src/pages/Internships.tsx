@@ -34,7 +34,7 @@ const Internships: React.FC = () => {
           <div
             className={`absolute inset-0 flex flex-col pt-10 pb-10 pl-2 pr-2 items-center justify-between text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200`}
           >
-            <div className="text-3xl mb-2 text-center">STEEL AUTHORITY OF INDIA LIMITED</div>
+            <div className="text-3xl mb-2 text-center">Steel Authority of India Limited</div>
             <div className="text-4xl text-center">Flutter Developer Intern</div>
             {showMoreInfo && (
               <button
@@ -55,7 +55,7 @@ const Internships: React.FC = () => {
           <div
             className={`absolute inset-0 flex flex-col pt-10 pb-10 pl-2 pr-2 items-center justify-between text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200`}
           >
-            <div className="text-3xl mb-2 text-center">DEFENCE RESEARCH AND DEVELOPMENT ORGANISATION</div>
+            <div className="text-3xl mb-2 text-center">Defence Research and Development Organisation</div>
             <div className="text-4xl text-center">Research and Development Intern</div>
             {showMoreInfo && (
               <button
