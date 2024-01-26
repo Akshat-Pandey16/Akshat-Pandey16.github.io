@@ -1,46 +1,60 @@
 /* src/index.css */
+
+/* Importing Tailwind CSS */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url(https://db.onlinewebfonts.com/c/27ce0e6567b3bec54d6354d07f597203?family=Jua+Regular);
+/* Define a custom font name for your project */
 @font-face {
-       font-family: "Jua Regular";
-       src: url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.eot");
-       src: url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.eot?#iefix")format("embedded-opentype"),
-       url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.woff2")format("woff2"),
-       url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.woff")format("woff"),
-       url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.ttf")format("truetype"),
-       url("https://db.onlinewebfonts.com/t/27ce0e6567b3bec54d6354d07f597203.svg#Jua Regular")format("svg");
+    font-family: 'eleven';
+    src: url('./assets/fonts/eleven.TTF') format('truetype'),
+}
+
+   @font-face {
+       font-family: 'barlo';
+       src: url('./assets/fonts/barlo.ttf') format('truetype'),
    }
 
+   @font-face {
+       font-family: 'barlob';
+       src: url('./assets/fonts/barlob.ttf') format('truetype'),
+   }
 
-   body {
-       font-family: "Jua Regular";
-     }
+/* Apply the custom font to a specific class (e.g., .title) */
+.title {
+    font-family: 'eleven';
+}
 
-
+/* Define your custom text classes */
 .text-10xl {
-       font-size: 10rem;
-       line-height: 1.2; /* Adjust line height as needed */
-       color: #00E9A0;
+    font-size: 10rem;
+    line-height: 1.2; /* Adjust line height as needed */
+    color: #00E9A0;
 }
-     
+
 .text-11xl {
-       font-size: 11rem;
-       line-height: 1.2;
-       color: #00E9A0;
+    font-size: 11rem;
+    line-height: 1.2;
+    color: #00E9A0;
 }
-     
+
 .text-12xl {
-       font-size: 12rem;
-       line-height: 1.2;
+    font-size: 12rem;
+    line-height: 1.2;
 }
 
 /* styles.css or App.css */
 body {
-       margin: 0;
-       padding: 0;
-       font-family: "Jua Regular";
+    margin: 0;
+    padding: 0;
 }
 
+/* Apply the custom font to the title within the body */
+body {
+    font-family: 'barlo';
+}
+
+.b{
+       font-family: 'barlob';
+}

@@ -4,7 +4,7 @@ import Switcher from './Slider';
 import ScrollListener from './ScrollListener';
 
 const commonPillClass =
-  'text-gray-600 text-lg cursor-pointer hover:bg-white hover:scale-105 hover:text-green-300 transition-all duration-300 rounded-full py-1 px-5 shadow-sm shadow-green-500 border-4 border-green-600';
+  'text-gray-600 b text-lg cursor-pointer hover:bg-white hover:scale-105 hover:text-green-300 transition-all duration-300 rounded-full py-1 px-5 shadow-sm shadow-green-500 border-4 border-green-600';
 
 const Navbar: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(false);
