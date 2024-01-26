@@ -13,7 +13,7 @@ import fastapi from '../assets/skills/fastapi.png';
 
 const commonBoxStyle = "bg-green-100 rounded-3xl h-40 w-40 m-10 border-4 border-green-500 hover:-translate-y-1/4 hover:opacity-80 transition-all shadow-md shadow-green-400 hover:scale-110 duration-500 relative overflow-hidden";
 const commonImageStyle = "w-full h-full object-fit rounded-3xl p-2";
-const hiddenTextStyle = "text-3xl text-emerald-300 flex items-center justify-center text-center duration-300 text-gray-950";
+const hiddenTextStyle = "text-3xl text-emerald-300 flex items-center justify-center text-center duration-300";
 
 const Skills: React.FC = () => {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
