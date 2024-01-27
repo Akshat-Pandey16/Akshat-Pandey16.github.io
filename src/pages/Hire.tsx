@@ -15,7 +15,7 @@ const Hire: React.FC = () => {
         </p>
       </div>
       <div className='rounded-2xl bg-emerald-900 border-emerald-300 border-2 p-4 flex flex-box justify-center items-center absolute bottom-28 right-24 max-w-[900px]'>
-        <p className="text-white text-3xl">
+        <p className="text-white text-3xl text-justify">
           This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
           Yes this paragraph is shifted to right and I am not sure why I did that. But I am sure I can shift your buisness to the right direction! <br/>(This line was definitely not written by ChatGPT)
         </p>
