@@ -1,5 +1,6 @@
 // Skills.tsx
-import React, { useState } from 'react';
+
+import React from 'react';
 import Img from '../assets/skills/Skills.svg';
 import Img1 from '../assets/skills/Skills1.svg';
 import Navbar from '../components/Navbar';
@@ -10,33 +11,15 @@ import flutter from '../assets/skills/flutter.png';
 import sql from '../assets/skills/sql.png';
 import react from '../assets/skills/react.png';
 import fastapi from '../assets/skills/fastapi.png';
-import django from '../assets/skills/cpp.png';
-import gcp from '../assets/skills/cpp.png';
+import django from '../assets/skills/django.png';
+import gcp from '../assets/skills/gcp.png';
 
 const commonBoxStyle = "bg-green-100 rounded-3xl h-40 w-40 m-10 border-4 border-green-500 hover:-translate-y-1/4 transition-all shadow-md shadow-green-400 hover:scale-110 duration-500 relative overflow-hidden";
 const commonImageStyle = "w-full h-full object-fit rounded-3xl p-2";
-const hiddenTextStyle = "text-3xl text-emerald-300 flex items-center justify-center text-center duration-300";
 
 const Skills: React.FC = () => {
-  const [hoveredBox, setHoveredBox] = useState<number | null>(null);
-  const [textPosition, setTextPosition] = useState<{ top: number; left: number } | null>(null);
-
-  const texts = ["C/C++", "Python", "Linux/BASH", "Flutter", "SQL", "React", "FastAPI", "Django", "Google Cloud Platform"];
 
   const images = [cpp, python, linux, flutter, sql, react, fastapi, django, gcp];
-
-  const handleHover = (boxNumber: number, event: React.MouseEvent<HTMLDivElement>) => {
-    setHoveredBox(boxNumber);
-
-    // Calculate the position based on the hovered box
-    const boxRect = event.currentTarget.getBoundingClientRect();
-    setTextPosition({ top: boxRect.bottom, left: boxRect.left });
-  };
-
-  const handleHoverOut = () => {
-    setHoveredBox(null);
-    setTextPosition(null);
-  };
 
   return (
     <div id="skills" className="flex flex-col border-y-2 border-green-300 items-center justify-center min-h-screen bg-gray-950 relative">
@@ -49,8 +32,6 @@ const Skills: React.FC = () => {
             <div
               key={boxNumber}
               className={commonBoxStyle}
-              onMouseEnter={(e) => handleHover(boxNumber, e)}
-              onMouseLeave={handleHoverOut}
             >
               <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={commonImageStyle} />
             </div>
@@ -70,23 +51,12 @@ const Skills: React.FC = () => {
             <div
               key={boxNumber}
               className={commonBoxStyle}
-              onMouseEnter={(e) => handleHover(boxNumber, e)}
-              onMouseLeave={handleHoverOut}
             >
               <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={commonImageStyle} />
             </div>
           ))}
         </div>
       </div>
-
-      {/* Text Display */}
-      {hoveredBox !== null && textPosition && (
-        <div className="z-50 absolute" style={{ top: `${textPosition.top}px`, left: `${textPosition.left}px` }}>
-          <div className={hiddenTextStyle}>
-            {texts[hoveredBox - 1]}
-          </div>
-        </div>
-      )}
 
       {/* Background Images */}
       <div className="flex flex-box justify-center items-center absolute top-0 right-80 mr-52">

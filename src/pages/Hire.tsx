@@ -10,11 +10,11 @@ const Hire: React.FC = () => {
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-24'>
         <h1 className="b text-white text-7xl mb-4">Why Hire Me?</h1>
-        <p className="text-gray-300 text-2xl text-center">
+        <p className="sb text-gray-300 text-2xl text-center">
           I would be a good fit for your team! Or thats what my mother says!
         </p>
       </div>
-      <div className='flex flex-box justify-center items-center absolute bottom-44 right-24 max-w-[900px]'>
+      <div className='rounded-2xl bg-emerald-900 border-emerald-300 border-2 p-4 flex flex-box justify-center items-center absolute bottom-28 right-24 max-w-[900px]'>
         <p className="text-white text-3xl">
           This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
           Yes this paragraph is shifted to right and I am not sure why I did that. But I am sure I can shift your buisness to the right direction! <br/>(This line was definitely not written by ChatGPT)

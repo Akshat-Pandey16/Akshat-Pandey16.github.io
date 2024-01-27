@@ -20,7 +20,7 @@ const Hire: React.FC = () => {
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-24'>
         <h1 className="b text-white text-8xl mb-4">Get in Touch!</h1>
-        <p className="text-gray-300 text-2xl text-center">
+        <p className="sb text-gray-300 text-3xl text-center">
           Ask me why I love rounded corners so much!
         </p>
       </div>
@@ -34,7 +34,7 @@ const Hire: React.FC = () => {
       </div>
 
       {/* Four vertically placed clickable boxes with different icons and text */}
-      <div className="flex flex-col absolute left-56 bottom-16">
+      <div className="flex rounded-3xl border-4 border-emerald-300 bg-emerald-800 p-4 flex-col absolute left-32 bottom-10">
         {boxesData.map((box, index) => (
           <a
             key={index}

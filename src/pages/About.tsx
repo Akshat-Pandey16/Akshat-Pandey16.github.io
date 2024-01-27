@@ -10,11 +10,11 @@ const About: React.FC = () => {
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-36 right-20'>
         <h1 className="b text-white text-8xl mb-4">About Me!</h1>
-        <p className="text-gray-300 text-2xl text-center">
+        <p className="sb text-gray-300 text-3xl text-center">
           See what I cherry picked about myself!
         </p>
       </div>
-      <div className='flex flex-box justify-center items-center absolute top-32 left-28 mr-24 max-w-[800px]'>
+      <div className='z-50 flex flex-box justify-center items-center rounded-2xl bg-emerald-900 border-emerald-300 border-2 p-4 absolute top-28 left-28 max-w-[800px]'>
         <p className="text-white text-2xl mt-8">
           Lorem ipsum dolor sit amet cons... Got you. I am a 22 year old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry picked words. 
           I am probably a good developer and not so good designer. I have been involved in various projects and hackathons, winning one of these, and leading in many, to give a  hint of leadership to the reader. I dont shy away to make use of AI tools to take help and accomplish task. <br/><br/>I hope this single page website would be a testement to my skills and abilities. Enjoy your stay here!<br/> <br/>

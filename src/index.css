@@ -26,6 +26,11 @@
          src: url('./assets/fonts/barlosb.ttf') format('truetype'),
     
    }
+   @font-face {
+    font-family: 'barlom';
+    src: url('./assets/fonts/barlom.ttf') format('truetype'),
+
+}
 /* Apply the custom font to a specific class (e.g., .title) */
 .title {
     font-family: 'eleven';
@@ -57,7 +62,7 @@ body {
 
 /* Apply the custom font to the title within the body */
 body {
-    font-family: 'barlo';
+    font-family: 'barlom';
 }
 
 .b{
