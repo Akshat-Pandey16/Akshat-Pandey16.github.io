@@ -23,6 +23,11 @@ const Internships: React.FC = () => {
       <div className="flex flex-box justify-center items-center absolute top-16 left-24">
         <h1 className="b text-white text-8xl mt-10">Internships.</h1>
       </div>
+      <div className='flex flex-box justify-center items-center absolute z-50 top-24 right-72 mr-24 max-w-[500px]'>
+        <p className="text-white text-2xl mt-8">
+          Have a look at the organisations that found me worthy enough to work for them!
+        </p>
+      </div>
       <div className="flex absolute justify-start items-start bottom-24 gap-36 right-48 mr-3">
         {/* First Box */}
         <div
