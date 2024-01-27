@@ -21,7 +21,7 @@ const Internships: React.FC = () => {
     <div id="internships" className="flex flex-col border-y-2 border-green-300 items-center justify-center min-h-screen bg-gray-950 relative">
       <Navbar />
       <div className="flex flex-box justify-center items-center absolute top-16 left-24">
-        <h1 className="b text-white text-8xl mt-10">Internships.</h1>
+        <h1 className="b text-emerald-400 text-8xl mt-10">Internships.</h1>
       </div>
       <div className='flex flex-box justify-center items-center absolute z-50 top-24 right-72 mr-24 max-w-[500px]'>
         <p className="sb text-white text-2xl mt-8">

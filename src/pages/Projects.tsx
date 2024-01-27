@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
           <ProjectBox title={projectData[index].title} image={projectData[index].image} />
         </div>
       ))}
-      <div className="b absolute top-1/2 right-0 transform rotate-90 text-white text-8xl z-50" style={{ right: '-100px' }}>
+      <div className="b text-emerald-400 absolute top-1/2 right-0 transform rotate-90 text-8xl z-50" style={{ right: '-100px' }}>
         Projects.
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/6">

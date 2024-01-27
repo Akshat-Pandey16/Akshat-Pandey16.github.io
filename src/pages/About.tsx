@@ -9,7 +9,7 @@ const About: React.FC = () => {
     <div id="about" className="flex flex-col items-center justify-center min-h-screen border-y-2 border-green-300 bg-gray-950 relative">
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-36 right-20'>
-        <h1 className="b text-white text-8xl mb-4">About Me!</h1>
+        <h1 className="b text-emerald-400 text-8xl mb-4">About Me!</h1>
         <p className="sb text-gray-300 text-3xl text-center">
           See what I cherry picked about myself!
         </p>
