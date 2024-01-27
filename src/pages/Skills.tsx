@@ -10,8 +10,10 @@ import flutter from '../assets/skills/flutter.png';
 import sql from '../assets/skills/sql.png';
 import react from '../assets/skills/react.png';
 import fastapi from '../assets/skills/fastapi.png';
+import django from '../assets/skills/cpp.png';
+import gcp from '../assets/skills/cpp.png';
 
-const commonBoxStyle = "bg-green-100 rounded-3xl h-40 w-40 m-10 border-4 border-green-500 hover:-translate-y-1/4 hover:opacity-80 transition-all shadow-md shadow-green-400 hover:scale-110 duration-500 relative overflow-hidden";
+const commonBoxStyle = "bg-green-100 rounded-3xl h-40 w-40 m-10 border-4 border-green-500 hover:-translate-y-1/4 transition-all shadow-md shadow-green-400 hover:scale-110 duration-500 relative overflow-hidden";
 const commonImageStyle = "w-full h-full object-fit rounded-3xl p-2";
 const hiddenTextStyle = "text-3xl text-emerald-300 flex items-center justify-center text-center duration-300";
 
@@ -19,9 +21,9 @@ const Skills: React.FC = () => {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
   const [textPosition, setTextPosition] = useState<{ top: number; left: number } | null>(null);
 
-  const texts = ["C/C++", "Python", "Linux/BASH", "Flutter", "SQL", "React", "FastAPI"];
+  const texts = ["C/C++", "Python", "Linux/BASH", "Flutter", "SQL", "React", "FastAPI", "Django", "Google Cloud Platform"];
 
-  const images = [cpp, python, linux, flutter, sql, react, fastapi];
+  const images = [cpp, python, linux, flutter, sql, react, fastapi, django, gcp];
 
   const handleHover = (boxNumber: number, event: React.MouseEvent<HTMLDivElement>) => {
     setHoveredBox(boxNumber);
