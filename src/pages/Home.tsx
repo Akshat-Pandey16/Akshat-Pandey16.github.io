@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
 import Img from '../assets/Home.svg';
-import Switcher from '../components/Slider';
+import Switcher from '../components/Switcher';
 
 const commonButtonClass =
   'text-gray-700 text-2xl bg-green-100 px-20 py-5 rounded-full flex items-center justify-center hover:bg-white hover:text-green-400 transition-transform transform-gpu hover:scale-110 shadow-lg shadow-green-500 border-4 border-green-600 shadow-md duration-500';

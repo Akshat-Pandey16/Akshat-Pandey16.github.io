@@ -1,6 +1,6 @@
 // Navbar.tsx
 import React, { useState } from 'react';
-import Switcher from './Slider';
+import Switcher from './Switcher';
 import ScrollListener from './ScrollListener';
 
 const commonPillClass =

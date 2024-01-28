@@ -1,5 +1,4 @@
 // Skills.tsx
-
 import React from 'react';
 import Img from '../assets/skills/Skills.svg';
 import Img1 from '../assets/skills/Skills1.svg';
