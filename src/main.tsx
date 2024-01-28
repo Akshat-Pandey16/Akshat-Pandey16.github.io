@@ -8,10 +8,12 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Hire from './pages/Hire';
 import Contact from './pages/Contact';
+import { DarkModeProvider } from './components/DarkMode';
 
 const App: React.FC = () => {
   return (
     <React.StrictMode>
+      <DarkModeProvider>
       <Home />
       <About />
       <Internships />
@@ -19,6 +21,7 @@ const App: React.FC = () => {
       <Skills />
       <Hire />
       <Contact />
+      </DarkModeProvider>
     </React.StrictMode>
   );
 };
