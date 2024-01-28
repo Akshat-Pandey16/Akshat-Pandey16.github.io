@@ -4,6 +4,8 @@ import { FaFileDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa
 import Navbar from '../components/Navbar';
 import Img from '../assets/Contact.svg';
 import Img1 from '../assets/Contact1.svg';
+import Img2 from '../assets/Contact2.svg';
+import Img3 from '../assets/Contact3.svg';
 
 const Hire: React.FC = () => {
   const boxesData = [
@@ -33,8 +35,16 @@ const Hire: React.FC = () => {
         <img src={Img1} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
 
+      <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-1/3">
+        <img src={Img2} alt="Img" className="w-full h-full object-cover z-20" />
+      </div>
+
+      <div className="flex flex-box justify-center items-center absolute top-0 right-0 h-1/3">
+        <img src={Img3} alt="Img" className="w-full h-full object-cover z-20" />
+      </div>
+
       {/* Four vertically placed clickable boxes with different icons and text */}
-      <div className="flex rounded-3xl border-4 border-emerald-300 bg-emerald-800 p-4 flex-col absolute left-32 bottom-10">
+      <div className="flex rounded-3xl border-4 border-emerald-300 bg-emerald-800 p-4 flex-col absolute bottom-8">
         {boxesData.map((box, index) => (
           <a
             key={index}

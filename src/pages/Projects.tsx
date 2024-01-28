@@ -14,8 +14,8 @@ const ProjectBox: React.FC<{ title: string; image: string }> = ({ title, image }
   return (
     <div className="group bg-green-100 h-60 w-96 rounded-3xl border-4 border-green-600 shadow-green-300 transform shadow-md p-2 transition-all duration-500 delay-50 hover:scale-105 hover:bg-opacity-180 relative overflow-hidden">
       <img src={image} alt={title} className="w-full h-full object-cover rounded-3xl transition-all duration-300 hover:opacity-40 hover:scale-90" />
-      <div className="text-4xl text-green-800 text-center mb-16 absolute inset-0 flex flex-col items-center justify-end opacity-0 transition-opacity duration-300 p-4 rounded-md group-hover:opacity-100">
-        {title}
+      <div className=" mb-10 absolute inset-0 flex flex-col items-center justify-end opacity-0 transition-opacity duration-300 p-4 rounded-md group-hover:opacity-100">
+        <div className='text-3xl text-green-800 text-center bg-emerald-300 p-3 rounded-2xl border-2 border-emerald-200'>{title}</div>
         <div className="flex items-center mt-4 space-x-2">
           <button className="bg-green-400 text-white px-4 py-2 rounded-full flex items-center">
             <FaGithub className="w-6 h-6 mr-2" />
