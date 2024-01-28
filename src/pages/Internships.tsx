@@ -11,17 +11,25 @@ interface InternshipCardProps {
   title: string;
   role: string;
   moreInfo: string;
-  onMoreInfoClick: () => void;
+  popupContent: PopupContentProps;
+  onMoreInfoClick: (content: PopupContentProps) => void;
 }
-// ... (other imports and code)
 
-const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, moreInfo, onMoreInfoClick }) => {
+interface PopupContentProps {
+  text: string;
+  imageUrl: string;
+  role: string;
+  description: string;
+  skill: string;
+}
+
+const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, moreInfo, popupContent, onMoreInfoClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [cardWidth, setCardWidth] = useState(96);
 
   return (
     <div
-      className={`group relative z-10 h-44 w-${cardWidth} bg-green-100 border-4 border-green-600 top-20 transform shadow-lg rounded-2xl p-2 flex items-center mb-4 gap-4 transition-all duration-300`}
+      className={`group relative z-10 h-44 w-${cardWidth} bg-green-100 border-4 border-green-600 top-24 transform shadow-lg rounded-2xl p-2 flex items-center mb-4 gap-3   transition-all duration-300`}
       onMouseEnter={() => {
         setIsHovered(true);
         setCardWidth(120);
@@ -31,10 +39,8 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
         setCardWidth(96);
       }}
     >
-      {/* Image */}
       <img src={image} alt="Your Alt Text" className="w-1/ h-full object-cover rounded-md" />
 
-      {/* Texts on the right side of the image */}
       <div className="flex flex-col ml-4 w-2/3">
         <div className="text-xl font-bold text-gray-600">{title}</div>
         <div className="text-lg text-gray-600">{role}</div>
@@ -42,8 +48,8 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
 
       {isHovered && (
         <button
-          onClick={onMoreInfoClick}
-          className={`absolute right-4 top-7 transform -translate-y-1/2 bg-green-200 text-green-800 px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
+          onClick={() => onMoreInfoClick(popupContent)}
+          className={`absolute right-4 top-7 transform -translate-y-1/2 bg-teal-200 text-green-800 px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
         >
           {moreInfo} <span className="ml-1">&#x2192;</span>
         </button>
@@ -54,12 +60,16 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
 
 const Internships: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const handleMoreInfoClick = () => {
+  const [popupContent, setPopupContent] = useState<PopupContentProps | null>(null);
+
+  const handleMoreInfoClick = (content: PopupContentProps) => {
+    setPopupContent(content);
     setShowPopup(true);
   };
 
   const handleClosePopup = () => {
     setShowPopup(false);
+    setPopupContent(null);
   };
 
   return (
@@ -74,33 +84,68 @@ const Internships: React.FC = () => {
         </p>
       </div>
 
-      {/* Internship Cards */}
-      <InternshipCard
-        image={SAIL}
-        title="Steel Authority of India Limited"
-        role="Flutter Developer Intern"
-        moreInfo="Additional Info 1"
-        onMoreInfoClick={handleMoreInfoClick}
-      />
+      <div className="flex flex-col items-center">
+        <InternshipCard
+          image={SAIL}
+          title="Steel Authority of India Limited"
+          role="Flutter Developer Intern"
+          moreInfo="Additional Info 1"
+          popupContent={{
+            text: "Steel Authority of India Limited",
+            imageUrl: SAIL,
+            skill: "Flutter, Node.js, OracleDB",
+            role: "Flutter Developer Intern",
+            description: `Led development of a cutting-edge mobile app with Flutter and Node.js, optimizing for iOS and Android. Integrated OracleDB for improved data access and efficiency, collaborating with diverse teams for success.`}}
+          onMoreInfoClick={handleMoreInfoClick}
+        />
 
-      <InternshipCard
-        image={DRDO}
-        title="Defence Research and Development Organisation"
-        role="Research and Development Intern"
-        moreInfo="Additional Info 2"
-        onMoreInfoClick={handleMoreInfoClick}
-      />
+        <div className="ml-4 md:ml-96 lg:right-80">
+          <InternshipCard
+            image={DRDO}
+            title="Defence Research and Development Organisation"
+            role="Research and Development Intern"
+            moreInfo="Additional Info 2"
+            popupContent={{
+              text: "Defence Research and Development Organisation",
+              imageUrl: DRDO,
+              role: "Research and Development Intern",
+              skill: "Python, GIS",
+              description: `
+              Explored terrain using QGIS and Python, enhancing efficiency in identifying ridges and spurs from DEM data. Elevated geospatial insights and streamlined terrain assessment for improved outcomes.`}}
+            onMoreInfoClick={handleMoreInfoClick}
+          />
+        </div>
+      </div>
 
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-50">
-          <div className="bg-green-100 border-4 border-green-600 p-8 rounded-2xl shadow-md shadow-green-500 text-gray-800">
-            <p>This is an example pop-up window content.</p>
-            <button onClick={handleClosePopup} className="bg-red-400 text-white px-4 py-2 rounded-full mt-4">
-              Close
-            </button>
-          </div>
+  <div className="fixed inset-0 flex items-center justify-center gap-5 bg-gray-700 bg-opacity-50 z-50">
+    <div className="bg-green-100 border-4 border-green-600 p-8 rounded-2xl shadow-md shadow-green-500 text-gray-800 flex">
+      {popupContent?.imageUrl && (
+        <div className="mr-4">
+          <img src={popupContent.imageUrl} alt="Popup Image" className="w-1/ h-64 object-cover rounded-md" />
         </div>
       )}
+      <div className="flex flex-col justify-between">
+        <div>
+          <p className="font-bold">Organisation: {popupContent?.text}</p>
+          <p className="font-semibold">Role: {popupContent?.role}</p>
+          <p className="font-semibold">Skills: {popupContent?.skill}</p>
+          <p>Description:</p>
+          <p
+            className="max-w-80 text-justify overflow-hidden"
+          >
+            {popupContent?.description}
+          </p>
+        </div>
+        <div className="flex justify-center mt-4">
+          <button onClick={handleClosePopup} className="bg-red-400 text-white px-4 py-2 rounded-full">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
 
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-2/3">
         <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
