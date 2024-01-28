@@ -1,3 +1,4 @@
+// Internships.tsx
 import React, { useState } from 'react';
 import Img from '../assets/internships/Internships.svg';
 import Img1 from '../assets/internships/Internships1.svg';
@@ -5,10 +6,54 @@ import SAIL from '../assets/internships/SAIL.png';
 import DRDO from '../assets/internships/DRDO.png';
 import Navbar from '../components/Navbar';
 
-const Internships: React.FC = () => {
-  const [showMoreInfo, setShowMoreInfo] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+interface InternshipCardProps {
+  image: string;
+  title: string;
+  role: string;
+  moreInfo: string;
+  onMoreInfoClick: () => void;
+}
+// ... (other imports and code)
 
+const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, moreInfo, onMoreInfoClick }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [cardWidth, setCardWidth] = useState(96);
+
+  return (
+    <div
+      className={`group relative z-10 h-44 w-${cardWidth} bg-green-100 border-4 border-green-600 top-20 transform shadow-lg rounded-2xl p-2 flex items-center mb-4 gap-4 transition-all duration-300`}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        setCardWidth(120);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setCardWidth(96);
+      }}
+    >
+      {/* Image */}
+      <img src={image} alt="Your Alt Text" className="w-1/ h-full object-cover rounded-md" />
+
+      {/* Texts on the right side of the image */}
+      <div className="flex flex-col ml-4 w-2/3">
+        <div className="text-xl font-bold text-gray-600">{title}</div>
+        <div className="text-lg text-gray-600">{role}</div>
+      </div>
+
+      {isHovered && (
+        <button
+          onClick={onMoreInfoClick}
+          className={`absolute right-4 top-7 transform -translate-y-1/2 bg-green-200 text-green-800 px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
+        >
+          {moreInfo} <span className="ml-1">&#x2192;</span>
+        </button>
+      )}
+    </div>
+  );
+};
+
+const Internships: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const handleMoreInfoClick = () => {
     setShowPopup(true);
   };
@@ -28,61 +73,35 @@ const Internships: React.FC = () => {
           Have a look at the organisations that found me worthy enough to work for them!
         </p>
       </div>
-      <div className="flex absolute justify-start items-start bottom-24 gap-36 right-48 mr-3">
-        {/* First Box */}
-        <div
-          className={`group relative z-10 h-96 w-80 bg-green-100 border-4 border-green-600 shadow-green-300 transform shadow-lg rounded-2xl p-4 transition-all duration-700 delay-200 hover:ml-[-10px] hover:w-96 hover:z-20 hover:bg-opacity-45`}
-          onMouseOver={() => setShowMoreInfo(true)}
-          onMouseOut={() => setShowMoreInfo(false)}
-        >
-          <img src={SAIL} alt="sail logo" className="w-full h-full object-center rounded-md transition-all duration-300 group-hover:scale-75" />
-          <div
-            className={`absolute inset-0 flex flex-col pt-10 pb-10 pl-2 pr-2 items-center justify-between text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200`}
-          >
-            <div className="text-3xl mb-2 text-center">Steel Authority of India Limited</div>
-            <div className="text-4xl text-center">Flutter Developer Intern</div>
-            {showMoreInfo && (
-              <button
-                onClick={handleMoreInfoClick}
-                className={`absolute bottom-4 left-1/2 mb-40 transform -translate-x-1/2 bg-green-100 text-green-700 px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
-              >
-                More Info <span className="ml-1">&#x2192;</span>
-              </button>
-            )}
-          </div>
-        </div>
-        <div
-          className={`group relative z-10 h-96 w-80 bg-green-100 border-4 border-green-600 shadow-green-300 transform shadow-lg rounded-2xl p-4 transition-all duration-700 delay-200 hover:ml-[-10px] hover:w-96 hover:z-20 hover:bg-opacity-45`}
-          onMouseOver={() => setShowMoreInfo(true)}
-          onMouseOut={() => setShowMoreInfo(false)}
-        >
-          <img src={DRDO} alt="sail logo" className="w-full h-full object-center rounded-md transition-all duration-300 group-hover:scale-75 group-hover:opacity-25" />
-          <div
-            className={`absolute inset-0 flex flex-col pt-10 pb-10 pl-2 pr-2 items-center justify-between text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200`}
-          >
-            <div className="text-3xl mb-2 text-center">Defence Research and Development Organisation</div>
-            <div className="text-4xl text-center">Research and Development Intern</div>
-            {showMoreInfo && (
-              <button
-                onClick={handleMoreInfoClick}
-                className={`absolute bottom-4 left-1/2 mb-40 transform -translate-x-1/2 bg-green-100 text-green-700 px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
-              >
-                More Info <span className="ml-1">&#x2192;</span>
-              </button>
-            )}
-          </div>
-        </div>
-      </div>
+
+      {/* Internship Cards */}
+      <InternshipCard
+        image={SAIL}
+        title="Steel Authority of India Limited"
+        role="Flutter Developer Intern"
+        moreInfo="Additional Info 1"
+        onMoreInfoClick={handleMoreInfoClick}
+      />
+
+      <InternshipCard
+        image={DRDO}
+        title="Defence Research and Development Organisation"
+        role="Research and Development Intern"
+        moreInfo="Additional Info 2"
+        onMoreInfoClick={handleMoreInfoClick}
+      />
+
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-50">
-          <div className="bg-green-100 border-4 border-green-600 p-8 rounded-2xl shadow-md shadow-green-500">
-            <p>Pop-up window content goes here</p>
+          <div className="bg-green-100 border-4 border-green-600 p-8 rounded-2xl shadow-md shadow-green-500 text-gray-800">
+            <p>This is an example pop-up window content.</p>
             <button onClick={handleClosePopup} className="bg-red-400 text-white px-4 py-2 rounded-full mt-4">
               Close
             </button>
           </div>
         </div>
       )}
+
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-2/3">
         <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
