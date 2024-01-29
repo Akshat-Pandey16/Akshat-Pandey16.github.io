@@ -59,7 +59,9 @@ const Projects: React.FC = () => {
   } = getProjectsColors(isDarkMode);
 
   return (
-    <div id="projects" className={`flex border-y-2 ${border} flex-wrap gap-4 items-center justify-center min-h-screen relative ${background}`}>
+    <div id="projects" className={`flex border-y-2 ${border} flex-wrap gap-4 items-center justify-center min-h-screen relative ${background}`} style={{
+      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+    }}>
       <Navbar />
       {[0, 1, 2].map((index) => (
         <div key={index} className={`z-50 flex items-center justify-center mt-8 ${index === 2 ? 'mr-32' : 'mr-10'} ${index === 2 && 'z-30'}`}>
@@ -71,7 +73,7 @@ const Projects: React.FC = () => {
           <ProjectBox title={projectData[index].title} image={projectData[index].image} githubLink={projectData[index].githubLink} />
         </div>
       ))}
-      <div className={`b ${headingText} absolute top-1/2 right-0 transform rotate-90 text-8xl z-50`} style={{ right: '-100px' }}>
+      <div className={`b ${headingText} absolute top-1/2 right-0 transform rotate-90 text-8xl z-50`} style={{ right: '-100px', transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease' }}>
         Projects.
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/6">

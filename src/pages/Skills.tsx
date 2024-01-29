@@ -55,7 +55,9 @@ const Skills: React.FC = () => {
   const images = [cpp, python, linux, flutter, sql, react, fastapi, django, gcp];
 
   return (
-    <div id="skills" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen relative ${background}`}>
+    <div id="skills" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen relative ${background}`} style={{
+      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+    }}>
       <Navbar />
 
       {/* First Row */}
@@ -75,7 +77,9 @@ const Skills: React.FC = () => {
       </div>
 
       {/* Header */}
-      <div className={`z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${text}`}>
+      <div className={`z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${text}`} style={{
+      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+    }}>
         <h1 className="b text-7xl">Skills.</h1>
       </div>
 

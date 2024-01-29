@@ -1,4 +1,3 @@
-// Internships.tsx
 import React, { useState } from 'react';
 import Img from '../assets/internships/Internships.svg';
 import Img1 from '../assets/internships/Internships1.svg';
@@ -42,6 +41,9 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
   return (
     <div
       className={`group relative z-10 h-44 w-${cardWidth} ${cardBackground} ${cardBorder} ${shadow} top-24 transform shadow-lg rounded-2xl p-2 flex items-center mb-4 gap-3 transition-all duration-300`}
+      style={{
+        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+      }}
       onMouseEnter={() => {
         setIsHovered(true);
         setCardWidth(120);
@@ -53,7 +55,9 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
     >
       <img src={image} alt="Your Alt Text" className="w-1/ h-full object-cover rounded-md" />
 
-      <div className={`flex flex-col ml-4 w-2/3 ${cardText}`}>
+      <div className={`flex flex-col ml-4 w-2/3 ${cardText}`} style={{
+        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+      }}>
         <div className="text-xl font-bold">{title}</div>
         <div className="text-lg">{role}</div>
       </div>
@@ -62,6 +66,9 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
         <button
           onClick={() => onMoreInfoClick(popupContent)}
           className={`absolute right-4 top-7 transform -translate-y-1/2 ${hoverBackground} ${hoverText} px-4 py-2 rounded-full opacity-100 transition-opacity duration-500 delay-1000`}
+          style={{
+            transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+          }}
         >
           {moreInfo} <span className="ml-1">&#x2192;</span>
         </button>
@@ -97,7 +104,9 @@ const Internships: React.FC = () => {
   };
 
   return (
-    <div id="internships" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`}>
+    <div id="internships" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`} style={{
+      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+    }}>
       <Navbar />
       <div className={`flex flex-box justify-center items-center absolute top-16 left-24`}>
         <h1 className={`b ${headingText} text-8xl mt-10`}>Internships.</h1>

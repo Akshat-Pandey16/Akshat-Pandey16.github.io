@@ -6,7 +6,7 @@ import { useDarkMode } from '../components/DarkMode';
 import { getHomeColors } from '../components/Color';
 
 const Home: React.FC = () => {
-  const { isDarkMode } = useDarkMode(); 
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     document.body.classList.toggle('dark', isDarkMode);
@@ -52,11 +52,19 @@ const Home: React.FC = () => {
     <div
       id="home"
       className={`relative flex flex-col items-center justify-end h-screen ${border} ${background} border-b-4 ${text}`}
+      style={{
+        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+      }}
     >
       <Switcher position="center" />
       <img src={Img} alt="Img" className="h-5/6 z-20" />
 
-      <div className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}>
+      <div
+        className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}
+        style={{
+          transition: 'transform 0.5s ease',
+        }}
+      >
         <h2 className={`title text-9xl tracking-widest ${accentText}`}>
           <span className="mr-12">//AKSHAT</span>
           <span className="ml-12">PANDEY//</span>
@@ -70,6 +78,9 @@ const Home: React.FC = () => {
             key={button.id}
             onClick={() => scrollToSection(button.id)}
             className={`mb-14 ${index === 0 || index === 2 ? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
+            style={{
+              transition: 'transform 0.5s ease',
+            }}
           >
             {button.icon} {button.text}
           </button>
@@ -83,6 +94,9 @@ const Home: React.FC = () => {
             key={button.id}
             onClick={() => scrollToSection(button.id)}
             className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
+            style={{
+              transition: 'transform 0.5s ease',
+            }}
           >
             {button.icon} {button.text}
           </button>

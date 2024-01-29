@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Img from '../assets/Aboutus.svg';
 import Img1 from '../assets/Aboutus1.svg';
 import Navbar from '../components/Navbar';
@@ -7,6 +7,10 @@ import { getAboutColors } from '../components/Color';
 
 const About: React.FC = () => {
   const { isDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    document.body.classList.toggle('dark', isDarkMode);
+  }, [isDarkMode]);
 
   const {
     border,
@@ -17,6 +21,7 @@ const About: React.FC = () => {
     headingText,
     subheadingText,
     textColor,
+    shadow,
   } = getAboutColors(isDarkMode);
 
   const aboutContainerClass = `flex flex-col items-center justify-center min-h-screen border-y-2 ${border} relative ${background}`;
@@ -26,7 +31,13 @@ const About: React.FC = () => {
   const aboutTextClass = `text-2xl mt-8 text-justify ${textColor}`;
 
   return (
-    <div id="about" className={aboutContainerClass}>
+    <div
+      id="about"
+      className={aboutContainerClass}
+      style={{
+        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+      }}
+    >
       <Navbar />
       <div className='flex flex-box flex-col justify-center items-center absolute top-36 right-20'>
         <h1 className={`b ${headingText} text-8xl mb-4`}>
@@ -36,9 +47,14 @@ const About: React.FC = () => {
           See what I cherry-picked about myself!
         </p>
       </div>
-      <div className={aboutContentClass}>
+      <div
+        className={`${aboutContentClass} ${shadow}`}
+        style={{
+          transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+        }}
+      >
         <p className={aboutTextClass}>
-          Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words. 
+          Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words.
           I am probably a good developer and not so good designer. I have been involved in various projects and hackathons, winning one of these, and leading in many, to give a hint of leadership to the reader. I don't shy away from making use of AI tools to take help and accomplish tasks. <br/><br/>I hope this single-page website would be a testament to my skills and abilities. Enjoy your stay here!<br/> <br/>
           <br/>P.S. We can talk about my weird font choice and color scheme in the interviews.
         </p>
