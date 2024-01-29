@@ -3,17 +3,29 @@ import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } fr
 import Img from '../assets/Home.svg';
 import Switcher from '../components/Switcher';
 import { useDarkMode } from '../components/DarkMode';
+import { getHomeColors } from '../components/Color';
 
 const Home: React.FC = () => {
-  const { isDarkMode} = useDarkMode();
+  const { isDarkMode } = useDarkMode(); 
 
   useEffect(() => {
     document.body.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
 
-  const commonButtonClass = `text-2xl px-20 py-5 rounded-full flex items-center justify-center hover:bg-white hover:text-green-400 transition-transform transform-gpu hover:scale-110 shadow-lg ${
-    isDarkMode ? 'shadow-green-500 border-4 border-green-600' : 'shadow-blue-500 border-4 border-blue-600'
-  } duration-500`;
+  const {
+    border,
+    background,
+    text,
+    accentText,
+    hoverBackground,
+    hoverText,
+    shadow,
+    buttonBorder,
+    buttonBackground,
+    hoverBorder,
+  } = getHomeColors(isDarkMode);
+
+  const commonButtonClass = `${buttonBackground} text-2xl px-20 py-5 rounded-full flex items-center justify-center ${hoverBackground} ${hoverText} ${hoverBorder} transition-transform transform-gpu hover:scale-110 ${shadow} ${buttonBorder} duration-500`;
 
   const commonButtonClass1 = 'w-6 h-6 mr-2';
 
@@ -39,15 +51,13 @@ const Home: React.FC = () => {
   return (
     <div
       id="home"
-      className={`relative flex flex-col items-center justify-end h-screen border-b-4 border-green-300 ${
-        isDarkMode ? 'bg-gray-950' : 'bg-gray-50'
-      }`}
+      className={`relative flex flex-col items-center justify-end h-screen ${border} ${background} border-b-4 ${text}`}
     >
-      <Switcher position="center"/>
+      <Switcher position="center" />
       <img src={Img} alt="Img" className="h-5/6 z-20" />
 
-      <div className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-        <h2 className={`title text-9xl tracking-widest ${isDarkMode ? 'text-emerald-300' : 'text-blue-500'}`}>
+      <div className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}>
+        <h2 className={`title text-9xl tracking-widest ${accentText}`}>
           <span className="mr-12">//AKSHAT</span>
           <span className="ml-12">PANDEY//</span>
         </h2>

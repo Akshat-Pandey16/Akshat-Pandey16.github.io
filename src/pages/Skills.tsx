@@ -1,4 +1,3 @@
-// Skills.tsx
 import React, { useState } from 'react';
 import Img from '../assets/skills/Skills.svg';
 import Img1 from '../assets/skills/Skills1.svg';
@@ -12,7 +11,8 @@ import react from '../assets/skills/react.png';
 import fastapi from '../assets/skills/fastapi.png';
 import django from '../assets/skills/django.png';
 import gcp from '../assets/skills/gcp.png';
-import { useDarkMode } from '../components/DarkMode'
+import { useDarkMode } from '../components/DarkMode';
+import { getSkillsColors } from '../components/Color';
 
 const commonBoxStyle =
   "rounded-3xl h-40 w-40 m-10 border-4 hover:-translate-y-1/4 transition-all shadow-md hover:scale-110 duration-500 relative overflow-hidden";
@@ -22,6 +22,15 @@ const commonImageStyle = "w-full h-full object-fit rounded-3xl p-2";
 const Skills: React.FC = () => {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
   const { isDarkMode } = useDarkMode();
+
+  const {
+    border,
+    background,
+    text,
+    hoverBackground,
+    hoverText,
+    boxbackground,
+  } = getSkillsColors(isDarkMode);
 
   const texts = [
     'C/C++',
@@ -46,7 +55,7 @@ const Skills: React.FC = () => {
   const images = [cpp, python, linux, flutter, sql, react, fastapi, django, gcp];
 
   return (
-    <div id="skills" className={`flex flex-col border-y-2 border-green-300 items-center justify-center min-h-screen relative ${isDarkMode ? 'bg-gray-950' : 'bg-white'}`}>
+    <div id="skills" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen relative ${background}`}>
       <Navbar />
 
       {/* First Row */}
@@ -55,7 +64,7 @@ const Skills: React.FC = () => {
           {[1, 2, 3, 4, 5].map((boxNumber) => (
             <div
               key={boxNumber}
-              className={`${commonBoxStyle} ${isDarkMode ? 'bg-emerald-800 border-emerald-500' : 'bg-green-100 border-green-500'}`}
+              className={`${commonBoxStyle} ${boxbackground} ${border}`}
               onMouseEnter={() => handleBoxHover(boxNumber)}
               onMouseLeave={handleBoxLeave}
             >
@@ -66,7 +75,7 @@ const Skills: React.FC = () => {
       </div>
 
       {/* Header */}
-      <div className={`z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${isDarkMode ? 'text-white' : 'text-emerald-400'}`}>
+      <div className={`z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${text}`}>
         <h1 className="b text-7xl">Skills.</h1>
       </div>
 
@@ -76,7 +85,7 @@ const Skills: React.FC = () => {
           {[6, 7, 8, 9].map((boxNumber) => (
             <div
               key={boxNumber}
-              className={`${commonBoxStyle} ${isDarkMode ? 'bg-emerald-800 border-emerald-500' : 'bg-green-100 border-green-500'}`}
+              className={`${commonBoxStyle} ${boxbackground} ${border}`}
               onMouseEnter={() => handleBoxHover(boxNumber)}
               onMouseLeave={handleBoxLeave}
             >
@@ -88,8 +97,8 @@ const Skills: React.FC = () => {
 
       {/* Display Text on Hover */}
       {hoveredBox !== null && (
-        <div className={`z-50 bottom-10 absolute text-2xl text-center ${isDarkMode ? 'text-white' : 'text-emerald-700'}`}>
-          <p className={`${isDarkMode ? 'bg-emerald-700' : 'bg-emerald-300'} p-2 rounded-md`}>{texts[hoveredBox - 1]}</p>
+        <div className={`z-50 bottom-10 absolute text-2xl text-center ${hoverText}`}>
+          <p className={`${hoverBackground} p-2 rounded-md`}>{texts[hoveredBox - 1]}</p>
         </div>
       )}
 
