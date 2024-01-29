@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
           >
             <div
               style={{
-                transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+                transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease ',
               }} className={`w-16 h-16 ${underboxBackground} ${border} ${shadow} rounded-xl mr-2 flex items-center justify-center overflow-hidden transition-transform transform-gpu hover:scale-110 duration:500 delay-400 ${
                 hoveredIndex === index ? hoverText : ''
               }`}

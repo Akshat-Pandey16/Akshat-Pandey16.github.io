@@ -14,7 +14,7 @@ export const getHomeColors = (isDarkMode: boolean) => {
          border: isDarkMode ? 'border-green-300' : 'border-emerald-400',
          background: isDarkMode ? 'bg-zinc-900' : 'bg-emerald-50',
          text: isDarkMode ? 'text-gray-700' : 'text-gray-800',
-         accentText: isDarkMode ? 'text-emerald-300' : 'text-zinc-900',
+         accentText: isDarkMode ? 'text-emerald-300' : 'text-green-600',
          hoverBackground: 'hover:bg-white',
          hoverText: 'hover:text-green-400',
          hoverBorder: isDarkMode ? 'hover:border-white' : 'hover:border-white',
@@ -104,7 +104,7 @@ export const getContactColors = (isDarkMode: boolean) => {
     subheadingText: isDarkMode ? 'text-gray-300' : 'text-emerald-600',
     boxBackground: isDarkMode ? 'bg-green-200' : 'bg-emerald-100',
     boxText: isDarkMode ? 'text-gray-600' : 'text-gray-800',
-    hoverText: isDarkMode ? 'text-emerald-500' : 'text-gray-600',
+    hoverText: isDarkMode ? 'text-emerald-500' : 'text-emerald-400',
     underboxBackground: isDarkMode ? 'bg-emerald-300' : 'bg-emerald-200',
     shadow: 'shadow-inner  shadow-emerald-800',
   };
