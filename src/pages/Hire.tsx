@@ -1,10 +1,10 @@
 import React from 'react';
-import LHire from '../assets/Light/Hire.svg';
-import DHire from '../assets/Dark/Hire.svg';
-import LHire1 from '../assets/Light/Hire1.svg';
-import DHire1 from '../assets/Dark/Hire1.svg';
-import LHire2 from '../assets/Light/Hire2.svg';
-import DHire2 from '../assets/Dark/Hire2.svg';
+import LHire from '../assets/Light/Hire.webp';
+import DHire from '../assets/Dark/Hire.webp';
+import LHire1 from '../assets/Light/Hire1.webp';
+import DHire1 from '../assets/Dark/Hire1.webp';
+import LHire2 from '../assets/Light/Hire2.webp';
+import DHire2 from '../assets/Dark/Hire2.webp';
 import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
 import { getHireColors } from '../components/Color';
@@ -35,10 +35,10 @@ const Hire: React.FC = () => {
           I might be a good fit for your team!
         </p>
       </div>
-      <div className={`z-50 rounded-2xl ${contentBackground} ${contentborder} ${shadow} border-2 p-4 flex flex-box justify-center items-center absolute bottom-24 right-24 max-w-[900px]`} style={transitionStyles}>
+      <div className={`z-50 rounded-2xl ${contentBackground} ${contentborder} ${shadow} border-2 p-4 flex flex-box justify-center items-center absolute bottom-16 right-24 max-w-[900px]`} style={transitionStyles}>
         <p className={`text-3xl text-justify ${contentText}`}>
           This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
-          Yes, this paragraph is shifted to the right and I am not sure why I did that. But I am sure I can shift your business in the right direction! <br/>(This line was definitely not written by ChatGPT)
+          <br/>Yes, this paragraph is shifted to the right and I am not sure why I did that. But I am sure I can shift your business in the right direction! <br/>(This line was definitely not written by ChatGPT)
         </p>
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/5">

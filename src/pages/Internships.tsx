@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import LIntern from '../assets/Light/Internships.svg';
-import DIntern from '../assets/Dark/Internships.svg';
-import LIntern1 from '../assets/Light/Internships1.svg';
-import DIntern1 from '../assets/Dark/Internships1.svg';
+import LIntern from '../assets/Light/Internships.webp';
+import DIntern from '../assets/Dark/Internships.webp';
+import LIntern1 from '../assets/Light/Internships1.webp';
+import DIntern1 from '../assets/Dark/Internships1.webp';
 import SAIL from '../assets/internships/SAIL.png';
 import DRDO from '../assets/internships/DRDO.png';
 import Navbar from '../components/Navbar';

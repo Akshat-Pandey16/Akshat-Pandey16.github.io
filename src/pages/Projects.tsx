@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaGithub, FaArrowRight } from 'react-icons/fa';
-import LProj from '../assets/Light/Projects.svg';
-import DProj from '../assets/Dark/Projects.svg';
-import LProj1 from '../assets/Light/Projects1.svg';
-import DProj1 from '../assets/Dark/Projects1.svg';
+import LProj from '../assets/Light/Projects.webp';
+import DProj from '../assets/Dark/Projects.webp';
+import LProj1 from '../assets/Light/Projects1.webp';
+import DProj1 from '../assets/Dark/Projects1.webp';
 import Sb from '../assets/projects/SB.png';
 import Mh from '../assets/projects/MH.png';
 import Ht from '../assets/projects/HT.png';

@@ -1,8 +1,8 @@
 // Home.tsx
 import React, { useEffect } from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
-import LHome from '../assets/Light/Home.svg';
-import DHome from '../assets/Dark/Home.svg';
+import LHome from '../assets/Light/Home.webp';
+import DHome from '../assets/Dark/Home.webp';
 import Switcher from '../components/Switcher';
 import { useDarkMode } from '../components/DarkMode';
 import { getHomeColors } from '../components/Color';

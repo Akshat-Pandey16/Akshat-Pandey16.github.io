@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { FaFileDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
-import LCont from '../assets/Light/Contact.svg';
-import DCont from '../assets/Dark/Contact.svg';
-import LCont1 from '../assets/Light/Contact1.svg';
-import DCont1 from '../assets/Dark/Contact1.svg';
-import LCont2 from '../assets/Light/Contact2.svg';
-import DCont2 from '../assets/Dark/Contact2.svg';
-import LCont3 from '../assets/Light/Contact3.svg';
-import DCont3 from '../assets/Dark/Contact3.svg';
+import LCont from '../assets/Light/Contact.webp';
+import DCont from '../assets/Dark/Contact.webp';
+import LCont1 from '../assets/Light/Contact1.webp';
+import DCont1 from '../assets/Dark/Contact1.webp';
+import LCont2 from '../assets/Light/Contact2.webp';
+import DCont2 from '../assets/Dark/Contact2.webp';
+import LCont3 from '../assets/Light/Contact3.webp';
+import DCont3 from '../assets/Dark/Contact3.webp';
 import { useDarkMode } from '../components/DarkMode';
 import { getContactColors } from '../components/Color';
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import LSkill from '../assets/Light/Skills.svg';
-import DSKill from '../assets/Dark/Skills.svg';
-import LSkill1 from '../assets/Light/Skills1.svg';
-import DSkill1 from '../assets/Dark/Skills1.svg';
+import LSkill from '../assets/Light/Skills.webp';
+import DSKill from '../assets/Dark/Skills.webp';
+import LSkill1 from '../assets/Light/Skills1.webp';
+import DSkill1 from '../assets/Dark/Skills1.webp';
 import Navbar from '../components/Navbar';
 import cpp from '../assets/skills/cpp.png';
 import python from '../assets/skills/python.png';

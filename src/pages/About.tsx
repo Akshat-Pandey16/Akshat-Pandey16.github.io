@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import LAbout from '../assets/Light/About.svg';
-import DAbout from '../assets/Dark/About.svg';
-import LAbout1 from '../assets/Light/About1.svg';
-import DAbout1 from '../assets/Dark/About1.svg';
+import LAbout from '../assets/Light/About.webp';
+import DAbout from '../assets/Dark/About.webp';
+import LAbout1 from '../assets/Light/About1.webp';
+import DAbout1 from '../assets/Dark/About1.webp';
 import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
 import { getAboutColors } from '../components/Color';
