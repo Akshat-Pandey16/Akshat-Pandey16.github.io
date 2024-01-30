@@ -74,51 +74,30 @@ body {
 }
 
 
-.dark {
-    /* Your dark mode styles */
-  
-    /* Add transition properties for a smooth switch */
-    transition: background 0.5s ease, color 0.5s ease, border 0.5s ease, /* Add other properties as needed */;
-  }
-  
-  .light {
-    /* Your light mode styles */
-  
-    /* Add transition properties for a smooth switch */
-    transition: background 0.5s ease, color 0.5s ease, border 0.5s ease, /* Add other properties as needed */;
-  }
-
-  /* styles.css */
-/* Light Mode Styles */
 body {
     user-select: none;
     --scrollbar-track-color: #ffffff;
     --scrollbar-thumb-color: #93ffc3;
   }
   
-  /* Dark Mode Styles */
   body.dark {
     --scrollbar-track-color: #434343;
     --scrollbar-thumb-color: #47f98e;
   }
   
-  /* Scrollbar Track */
   body::-webkit-scrollbar {
     width: 10px;
   }
-  
-  /* Scrollbar Handle */
+
   body::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-color);
     border-radius: 6px;
   }
-  
-  /* Scrollbar Handle on hover */
+
   body::-webkit-scrollbar-thumb:hover {
     background-color: #25fbb3;
   }
   
-  /* Scrollbar Track */
   body::-webkit-scrollbar-track {
     background-color: var(--scrollbar-track-color);
   }
