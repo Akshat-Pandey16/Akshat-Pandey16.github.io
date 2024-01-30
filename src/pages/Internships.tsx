@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 import LIntern from '../assets/Light/Internships.webp';
 import DIntern from '../assets/Dark/Internships.webp';
 import LIntern1 from '../assets/Light/Internships1.webp';
@@ -23,6 +24,7 @@ interface PopupContentProps {
   role: string;
   description: string;
   skill: string;
+  githubLink?: string;
 }
 
 const InternshipCard: React.FC<InternshipCardProps> = ({
@@ -137,6 +139,7 @@ const Internships: React.FC = () => {
             skill: "Flutter, Node.js, OracleDB",
             role: "Flutter Developer Intern",
             description: `Led development of a cutting-edge mobile app with Flutter and Node.js, optimizing for iOS and Android. Integrated OracleDB for improved data access and efficiency, collaborating with diverse teams for success.`,
+            githubLink: "https://github.com/your-username/sail-internship-project",
           }}
           onMoreInfoClick={handleMoreInfoClick}
         />
@@ -154,6 +157,7 @@ const Internships: React.FC = () => {
               skill: "Python, GIS",
               description: `
               Explored terrain using QGIS and Python, enhancing efficiency in identifying ridges and spurs from DEM data. Elevated geospatial insights and streamlined terrain assessment for improved outcomes.`,
+              githubLink: "https://github.com/your-username/drdo-internship-project",
             }}
             onMoreInfoClick={handleMoreInfoClick}
           />
@@ -183,6 +187,18 @@ const Internships: React.FC = () => {
                   Close
                 </button>
               </div>
+              {popupContent?.githubLink && (
+                <div className="flex justify-center mt-2">
+                  <a
+                    href={popupContent.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`bg-blue-500 text-white px-4 py-2 rounded-full ${closeButtonHover} flex items-center`}
+                  >
+                    <FaGithub className="mr-1" /> GitHub
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
