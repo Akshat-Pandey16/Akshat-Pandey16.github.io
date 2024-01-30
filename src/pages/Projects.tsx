@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaGithub, FaArrowRight } from 'react-icons/fa';
-import Img from '../assets/projects/Projects.svg';
-import Img1 from '../assets/projects/Projects1.svg';
+import LProj from '../assets/Light/Projects.svg';
+import DProj from '../assets/Dark/Projects.svg';
+import LProj1 from '../assets/Light/Projects1.svg';
+import DProj1 from '../assets/Dark/Projects1.svg';
 import Sb from '../assets/projects/SB.png';
 import Mh from '../assets/projects/MH.png';
 import Ht from '../assets/projects/HT.png';
@@ -77,10 +79,10 @@ const Projects: React.FC = () => {
         Projects.
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/6">
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DProj : LProj } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-80 h-1/2">
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DProj1 : LProj1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
     </div>
   );

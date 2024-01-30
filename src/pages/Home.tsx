@@ -1,6 +1,8 @@
+// Home.tsx
 import React, { useEffect } from 'react';
 import { FaArrowRight, FaInfo, FaBuilding, FaLaptopCode, FaCode, FaEnvelope } from 'react-icons/fa';
-import Img from '../assets/Home.svg';
+import LHome from '../assets/Light/Home.svg';
+import DHome from '../assets/Dark/Home.svg';
 import Switcher from '../components/Switcher';
 import { useDarkMode } from '../components/DarkMode';
 import { getHomeColors } from '../components/Color';
@@ -57,7 +59,7 @@ const Home: React.FC = () => {
       }}
     >
       <Switcher position="center" />
-      <img src={Img} alt="Img" className="h-5/6 z-20" />
+      <img src={isDarkMode ? DHome : LHome} alt="Img" className="h-5/6 z-20"/>
 
       <div
         className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}

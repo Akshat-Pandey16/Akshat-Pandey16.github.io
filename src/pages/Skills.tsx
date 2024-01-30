@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Img from '../assets/skills/Skills.svg';
-import Img1 from '../assets/skills/Skills1.svg';
+import LSkill from '../assets/Light/Skills.svg';
+import DSKill from '../assets/Dark/Skills.svg';
+import LSkill1 from '../assets/Light/Skills1.svg';
+import DSkill1 from '../assets/Dark/Skills1.svg';
 import Navbar from '../components/Navbar';
 import cpp from '../assets/skills/cpp.png';
 import python from '../assets/skills/python.png';
@@ -108,10 +110,10 @@ const Skills: React.FC = () => {
 
       {/* Background Images */}
       <div className="flex flex-box justify-center items-center absolute top-0 right-80 mr-52">
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DSKill : LSkill} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-3/5">
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DSkill1 : LSkill1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
     </div>
   );

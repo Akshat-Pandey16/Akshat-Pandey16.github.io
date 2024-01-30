@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { FaFileDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
-import Img from '../assets/Contact.svg';
-import Img1 from '../assets/Contact1.svg';
-import Img2 from '../assets/Contact2.svg';
-import Img3 from '../assets/Contact3.svg';
+import LCont from '../assets/Light/Contact.svg';
+import DCont from '../assets/Dark/Contact.svg';
+import LCont1 from '../assets/Light/Contact1.svg';
+import DCont1 from '../assets/Dark/Contact1.svg';
+import LCont2 from '../assets/Light/Contact2.svg';
+import DCont2 from '../assets/Dark/Contact2.svg';
+import LCont3 from '../assets/Light/Contact3.svg';
+import DCont3 from '../assets/Dark/Contact3.svg';
 import { useDarkMode } from '../components/DarkMode';
 import { getContactColors } from '../components/Color';
 
@@ -50,19 +54,19 @@ const Contact: React.FC = () => {
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute top-0 left-0 h-1/3`}>
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont : LCont} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute bottom-0 right-0 h-4/5`}>
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont1 : LCont1} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute bottom-0 left-0 h-1/3`}>
-        <img src={Img2} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont2 : LCont2} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute top-0 right-0 h-1/3`}>
-        <img src={Img3} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont3 : LCont3} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
 
       <div style={{

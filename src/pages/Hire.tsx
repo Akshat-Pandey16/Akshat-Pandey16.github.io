@@ -1,7 +1,10 @@
 import React from 'react';
-import Img from '../assets/Hire.svg';
-import Img1 from '../assets/Hire1.svg';
-import Img2 from '../assets/Hire2.svg';
+import LHire from '../assets/Light/Hire.svg';
+import DHire from '../assets/Dark/Hire.svg';
+import LHire1 from '../assets/Light/Hire1.svg';
+import DHire1 from '../assets/Dark/Hire1.svg';
+import LHire2 from '../assets/Light/Hire2.svg';
+import DHire2 from '../assets/Dark/Hire2.svg';
 import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
 import { getHireColors } from '../components/Color';
@@ -44,13 +47,13 @@ const Hire: React.FC = () => {
         </p>
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/5">
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DHire : LHire} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-4/5">
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DHire1 : LHire1} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 right-0 h-1/3">
-        <img src={Img2} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DHire2 : LHire2} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
     </div>
   );

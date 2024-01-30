@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Img from '../assets/internships/Internships.svg';
-import Img1 from '../assets/internships/Internships1.svg';
+import LIntern from '../assets/Light/Internships.svg';
+import DIntern from '../assets/Dark/Internships.svg';
+import LIntern1 from '../assets/Light/Internships1.svg';
+import DIntern1 from '../assets/Dark/Internships1.svg';
 import SAIL from '../assets/internships/SAIL.png';
 import DRDO from '../assets/internships/DRDO.png';
 import Navbar from '../components/Navbar';
@@ -181,10 +183,10 @@ const Internships: React.FC = () => {
       )}
 
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-2/3">
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DIntern : LIntern } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 right-0 h-2/6">
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DIntern1 : LIntern1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
       </div>
     </div>
   );

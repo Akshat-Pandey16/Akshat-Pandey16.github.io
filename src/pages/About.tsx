@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import Img from '../assets/Aboutus.svg';
-import Img1 from '../assets/Aboutus1.svg';
+import LAbout from '../assets/Light/About.svg'
+import DAbout from '../assets/Dark/About.svg';
+import LAbout1 from '../assets/Light/About1.svg'
+import DAbout1 from '../assets/Dark/About1.svg';
 import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
 import { getAboutColors } from '../components/Color';
@@ -61,10 +63,10 @@ const About: React.FC = () => {
       </div>
 
       <div className="flex flex-box justify-center items-center absolute bottom-0 right-0 h-2/3">
-        <img src={Img} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DAbout : LAbout} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 mr-24 pr-4 h-1/6">
-        <img src={Img1} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DAbout1 : LAbout1} alt="Img" className="w-full h-full object-cover z-20" />
       </div>
     </div>
   );
