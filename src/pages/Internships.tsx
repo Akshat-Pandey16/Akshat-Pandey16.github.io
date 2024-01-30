@@ -139,7 +139,7 @@ const Internships: React.FC = () => {
             skill: "Flutter, Node.js, OracleDB",
             role: "Flutter Developer Intern",
             description: `Led development of a cutting-edge mobile app with Flutter and Node.js, optimizing for iOS and Android. Integrated OracleDB for improved data access and efficiency, collaborating with diverse teams for success.`,
-            githubLink: "https://github.com/your-username/sail-internship-project",
+            githubLink: "https://github.com/Akshat-Pandey16/MES-SAIL",
           }}
           onMoreInfoClick={handleMoreInfoClick}
         />
