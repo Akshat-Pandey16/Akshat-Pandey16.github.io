@@ -19,18 +19,19 @@ interface ProjectData {
   githubLink: string;
 }
 
-const ProjectBox: React.FC<ProjectData> = ({ title, image, githubLink }) => {
+interface ProjectData {
+  title: string;
+  image: string;
+  githubLink: string;
+}
+
+const ProjectBox: React.FC<ProjectData> = React.memo(({ title, image, githubLink }) => {
   const { isDarkMode } = useDarkMode();
-  const {
-    cardBackground,
-    cardBorder,
-    shadow,
-    contentText,
-  } = getProjectsColors(isDarkMode);
+  const { cardBackground, cardBorder, shadow, contentText } = getProjectsColors(isDarkMode);
 
   return (
     <div className={`group ${cardBackground} h-60 w-96 rounded-3xl border-4 ${cardBorder} ${shadow} transform shadow-md p-2 transition-all duration-500 delay-50 hover:scale-105 hover:bg-opacity-180 relative overflow-hidden`}>
-      <img src={image} alt={title} className="w-full h-full object-cover rounded-3xl transition-all duration-300 hover:opacity-40 hover:scale-90" />
+      <img src={image} alt={title} className="w-full h-full object-cover rounded-3xl transition-all duration-300 hover:opacity-40 hover:scale-90" loading='lazy'/>
       <div className={`mb-10 absolute inset-0 flex flex-col items-center justify-end opacity-0 transition-opacity duration-300 p-4 rounded-md group-hover:opacity-100 ${contentText}`}>
         <div className={`text-3xl ${contentText} text-center bg-emerald-500 p-3 rounded-2xl border-2 border-emerald-200`}>{title}</div>
         <div className="flex items-center mt-4 space-x-2">
@@ -42,7 +43,7 @@ const ProjectBox: React.FC<ProjectData> = ({ title, image, githubLink }) => {
       </div>
     </div>
   );
-};
+});
 
 const Projects: React.FC = () => {
   const projectData: ProjectData[] = [
@@ -54,11 +55,7 @@ const Projects: React.FC = () => {
   ];
 
   const { isDarkMode } = useDarkMode();
-  const {
-    border,
-    background,
-    headingText,
-  } = getProjectsColors(isDarkMode);
+  const { border, background, headingText } = getProjectsColors(isDarkMode);
 
   return (
     <div id="projects" className={`flex border-y-2 ${border} flex-wrap gap-4 items-center justify-center min-h-screen relative ${background}`} style={{
@@ -79,10 +76,10 @@ const Projects: React.FC = () => {
         Projects.
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 left-0 h-2/6">
-        <img src={isDarkMode ? DProj : LProj } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DProj : LProj } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy'/>
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-80 h-1/2">
-        <img src={isDarkMode ? DProj1 : LProj1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DProj1 : LProj1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy'/>
       </div>
     </div>
   );

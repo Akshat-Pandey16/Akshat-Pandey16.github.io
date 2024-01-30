@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import LAbout from '../assets/Light/About.svg'
+import LAbout from '../assets/Light/About.svg';
 import DAbout from '../assets/Dark/About.svg';
-import LAbout1 from '../assets/Light/About1.svg'
+import LAbout1 from '../assets/Light/About1.svg';
 import DAbout1 from '../assets/Dark/About1.svg';
 import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
@@ -41,7 +41,8 @@ const About: React.FC = () => {
       }}
     >
       <Navbar />
-      <div className='flex flex-box flex-col justify-center items-center absolute top-36 right-20'>
+
+      <div className="flex flex-box flex-col justify-center items-center absolute top-36 right-20">
         <h1 className={`b ${headingText} text-8xl mb-4`}>
           About Me!
         </h1>
@@ -49,6 +50,7 @@ const About: React.FC = () => {
           See what I cherry-picked about myself!
         </p>
       </div>
+
       <div
         className={`${aboutContentClass} ${shadow}`}
         style={{
@@ -56,17 +58,18 @@ const About: React.FC = () => {
         }}
       >
         <p className={aboutTextClass}>
-          Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words.
+        Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words.
           I am probably a good developer and not so good designer. I have been involved in various projects and hackathons, winning one of these, and leading in many, to give a hint of leadership to the reader. I don't shy away from making use of AI tools to take help and accomplish tasks. <br/><br/>I hope this single-page website would be a testament to my skills and abilities. Enjoy your stay here!<br/> <br/>
           <br/>P.S. We can talk about my weird font choice and color scheme in the interviews.
         </p>
       </div>
 
       <div className="flex flex-box justify-center items-center absolute bottom-0 right-0 h-2/3">
-        <img src={isDarkMode ? DAbout : LAbout} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DAbout : LAbout} alt="Img" className="w-full h-full object-cover z-20" loading='lazy' />
       </div>
+
       <div className="flex flex-box justify-center items-center absolute top-0 mr-24 pr-4 h-1/6">
-        <img src={isDarkMode ? DAbout1 : LAbout1} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DAbout1 : LAbout1} alt="Img" className="w-full h-full object-cover z-20" loading='lazy'/>
       </div>
     </div>
   );

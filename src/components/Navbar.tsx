@@ -5,7 +5,7 @@ import ScrollListener from './ScrollListener';
 import { useDarkMode } from './DarkMode';
 import { getNavbarColors } from '../components/Color';
 
-const commonPillClass = 'text-white-600 b text-lg cursor-pointer transition-all duration-300 rounded-full py-1 px-5 shadow-sm';
+const commonPillClass = 'text-white-600 sb text-lg cursor-pointer transition-all duration-300 rounded-full py-1 px-5 shadow-sm';
 
 const Navbar: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(false);

@@ -26,6 +26,10 @@ const Contact: React.FC = () => {
     shadow,
   } = getContactColors(isDarkMode);
 
+  const transitionStyles = {
+    transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+  };
+
   const boxesData = [
     { icon: <FaFileDownload />, text: 'Download Resume', link: 'https://drive.google.com/file/d/1xroePlfuRA74yIozn3-nwg-p4wMXZfrL/view?usp=sharing' },
     { icon: <FaGithub />, text: 'Github', link: 'https://github.com/Akshat-Pandey16' },
@@ -36,42 +40,32 @@ const Contact: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div id="contact" style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }} className={`flex flex-col items-center justify-center min-h-screen border-y-2 ${border} relative ${background}`}>
+    <div id="contact" className={`flex flex-col items-center justify-center min-h-screen border-y-2 ${border} relative ${background}`} style={transitionStyles}>
       <Navbar />
-      <div style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }} className={`flex flex-box flex-col justify-center items-center absolute top-24`}>
-        <h1 style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }} className={`b text-8xl mb-4 ${headingText}`}>Get in Touch!</h1>
-        <p style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }} className={`sb text-3xl text-center ${subheadingText}`}>
+      <div className={`flex flex-box flex-col justify-center items-center absolute top-24`} style={transitionStyles}>
+        <h1 className={`b text-8xl mb-4 ${headingText}`}>Get in Touch!</h1>
+        <p className={`sb text-3xl text-center ${subheadingText}`}>
           Ask me why I love rounded corners so much!
         </p>
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute top-0 left-0 h-1/3`}>
-        <img src={isDarkMode ? DCont : LCont} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont : LCont} alt="Contact Image 1" className="w-full h-full object-cover z-20" loading='lazy' />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute bottom-0 right-0 h-4/5`}>
-        <img src={isDarkMode ? DCont1 : LCont1} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont1 : LCont1} alt="Contact Image 2" className="w-full h-full object-cover z-20" loading='lazy' />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute bottom-0 left-0 h-1/3`}>
-        <img src={isDarkMode ? DCont2 : LCont2} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont2 : LCont2} alt="Contact Image 3" className="w-full h-full object-cover z-20" loading='lazy' />
       </div>
 
       <div className={`flex flex-box justify-center items-center absolute top-0 right-0 h-1/3`}>
-        <img src={isDarkMode ? DCont3 : LCont3} alt="Img" className="w-full h-full object-cover z-20" />
+        <img src={isDarkMode ? DCont3 : LCont3} alt="Contact Image 4" className="w-full h-full object-cover z-20" loading='lazy' />
       </div>
 
-      <div style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }} className={`flex rounded-3xl border-4 ${border} ${boxBackground} p-4 flex-col absolute bottom-8`}>
+      <div className={`flex rounded-3xl border-4 ${border} ${boxBackground} p-4 flex-col absolute bottom-8`} style={transitionStyles}>
         {boxesData.map((box, index) => (
           <a
             key={index}
@@ -83,9 +77,7 @@ const Contact: React.FC = () => {
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div
-              style={{
-                transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease ',
-              }} className={`w-16 h-16 ${underboxBackground} ${border} ${shadow} rounded-xl mr-2 flex items-center justify-center overflow-hidden transition-transform transform-gpu hover:scale-110 duration:500 delay-400 ${
+              className={`w-16 h-16 ${underboxBackground} ${border} ${shadow} rounded-xl mr-2 flex items-center justify-center overflow-hidden transition-transform transform-gpu hover:scale-110 duration:500 delay-400 ${
                 hoveredIndex === index ? hoverText : ''
               }`}
             >

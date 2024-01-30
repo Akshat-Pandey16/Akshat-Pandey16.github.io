@@ -26,7 +26,14 @@ interface PopupContentProps {
   skill: string;
 }
 
-const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, moreInfo, popupContent, onMoreInfoClick }) => {
+const InternshipCard: React.FC<InternshipCardProps> = ({
+  image,
+  title,
+  role,
+  moreInfo,
+  popupContent,
+  onMoreInfoClick,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [cardWidth, setCardWidth] = useState(96);
   const { isDarkMode } = useDarkMode();
@@ -43,9 +50,6 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
   return (
     <div
       className={`group relative z-10 h-44 w-${cardWidth} ${cardBackground} ${cardBorder} ${shadow} top-24 transform shadow-lg rounded-2xl p-2 flex items-center mb-4 gap-3 transition-all duration-300`}
-      style={{
-        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-      }}
       onMouseEnter={() => {
         setIsHovered(true);
         setCardWidth(120);
@@ -55,7 +59,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({ image, title, role, mor
         setCardWidth(96);
       }}
     >
-      <img src={image} alt="Your Alt Text" className="w-1/ h-full object-cover rounded-md" />
+      <img src={image} alt="Your Alt Text" className="w-1/ h-full object-cover rounded-md" loading='lazy' />
 
       <div className={`flex flex-col ml-4 w-2/3 ${cardText}`} style={{
         transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
@@ -106,9 +110,10 @@ const Internships: React.FC = () => {
   };
 
   return (
-    <div id="internships" className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`} style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }}>
+    <div
+      id="internships"
+      className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`}
+    >
       <Navbar />
       <div className={`flex flex-box justify-center items-center absolute top-16 left-24`}>
         <h1 className={`b ${headingText} text-8xl mt-10`}>Internships.</h1>
@@ -183,10 +188,10 @@ const Internships: React.FC = () => {
       )}
 
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-2/3">
-        <img src={isDarkMode ? DIntern : LIntern } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DIntern : LIntern } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy'/>
       </div>
       <div className="flex flex-box justify-center items-center absolute top-0 right-0 h-2/6">
-        <img src={isDarkMode ? DIntern1 : LIntern1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DIntern1 : LIntern1 } alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy' />
       </div>
     </div>
   );

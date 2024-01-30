@@ -16,10 +16,11 @@ import gcp from '../assets/skills/gcp.png';
 import { useDarkMode } from '../components/DarkMode';
 import { getSkillsColors } from '../components/Color';
 
-const commonBoxStyle =
-  "rounded-3xl h-40 w-40 m-10 border-4 hover:-translate-y-1/4 transition-all shadow-md hover:scale-110 duration-500 relative overflow-hidden";
+const CommonBoxStyle = `
+  rounded-3xl h-40 w-40 m-10 border-4 
+  hover:-translate-y-1/4 transition-all shadow-md hover:scale-110 duration-500 relative overflow-hidden`;
 
-const commonImageStyle = "w-full h-full object-fit rounded-3xl p-2";
+const CommonImageStyle = 'w-full h-full object-fit rounded-3xl p-2';
 
 const Skills: React.FC = () => {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
@@ -34,17 +35,7 @@ const Skills: React.FC = () => {
     boxbackground,
   } = getSkillsColors(isDarkMode);
 
-  const texts = [
-    'C/C++',
-    'Python',
-    'Linux/Bash',
-    'Flutter',
-    'SQL',
-    'React',
-    'FastAPI',
-    'Django',
-    'GCP',
-  ];
+  const texts = ['C/C++', 'Python', 'Linux/Bash', 'Flutter', 'SQL', 'React', 'FastAPI', 'Django', 'GCP'];
 
   const handleBoxHover = (boxNumber: number) => {
     setHoveredBox(boxNumber);
@@ -68,52 +59,48 @@ const Skills: React.FC = () => {
           {[1, 2, 3, 4, 5].map((boxNumber) => (
             <div
               key={boxNumber}
-              className={`${commonBoxStyle} ${boxbackground} ${border}`}
+              className={`${CommonBoxStyle} ${boxbackground} ${border}`}
               onMouseEnter={() => handleBoxHover(boxNumber)}
               onMouseLeave={handleBoxLeave}
             >
-              <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={commonImageStyle} />
+              <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={CommonImageStyle} loading='lazy'/>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Header */}
       <div className={`z-50 flex flex-box justify-center items-center absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${text}`} style={{
-      transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-    }}>
+        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+      }}>
         <h1 className="b text-7xl">Skills.</h1>
       </div>
 
-      {/* Second Row */}
       <div className="z-50 flex flex-box justify-center items-center absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-500">
         <div className="flex">
           {[6, 7, 8, 9].map((boxNumber) => (
             <div
               key={boxNumber}
-              className={`${commonBoxStyle} ${boxbackground} ${border}`}
+              className={`${CommonBoxStyle} ${boxbackground} ${border}`}
               onMouseEnter={() => handleBoxHover(boxNumber)}
               onMouseLeave={handleBoxLeave}
             >
-              <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={commonImageStyle} />
+              <img src={images[boxNumber - 1]} alt={`CommonImage${boxNumber}`} className={CommonImageStyle} />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Display Text on Hover */}
       {hoveredBox !== null && (
         <div className={`z-50 bottom-10 absolute text-2xl text-center ${hoverText}`}>
           <p className={`${hoverBackground} p-2 rounded-md`}>{texts[hoveredBox - 1]}</p>
         </div>
       )}
 
-      {/* Background Images */}
       <div className="flex flex-box justify-center items-center absolute top-0 right-80 mr-52">
-        <img src={isDarkMode ? DSKill : LSkill} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DSKill : LSkill} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy' />
       </div>
       <div className="flex flex-box justify-center items-center absolute bottom-0 left-0 h-3/5">
-        <img src={isDarkMode ? DSkill1 : LSkill1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" />
+        <img src={isDarkMode ? DSkill1 : LSkill1} alt="Img" className="w-full h-full object-cover z-20 transition-all duration-300" loading='lazy'/>
       </div>
     </div>
   );

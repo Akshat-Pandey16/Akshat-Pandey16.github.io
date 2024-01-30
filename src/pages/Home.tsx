@@ -76,35 +76,35 @@ const Home: React.FC = () => {
 
         {/* Buttons on the left side */}
         <div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 -translate-x-20 left-4 ml-24">
-  {sectionButtons.slice(0, 3).map((button, index) => (
-    <button
-      key={button.id}
-      onClick={() => scrollToSection(button.id)}
-      className={`mb-14 ${index === 0 || index === 2 ? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
-      style={{
-        transition: 'transform 0.5s ease',
-      }}
-    >
-      {button.icon} {button.text}
-    </button>
-  ))}
-</div>
+          {sectionButtons.slice(0, 3).map((button, index) => (
+            <button
+              key={button.id}
+              onClick={() => scrollToSection(button.id)}
+              className={`mb-14 ${index === 0 || index === 2 ? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
+              style={{
+                transition: 'transform 0.5s ease',
+              }}
+            >
+              {button.icon} {button.text}
+            </button>
+          ))}
+        </div>
 
-{/* Buttons on the right side */}
-<div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 translate-x-20 right-4 mr-24">
-  {sectionButtons.slice(3).map((button, index) => (
-    <button
-      key={button.id}
-      onClick={() => scrollToSection(button.id)}
-      className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
-      style={{
-        transition: 'transform 0.5s ease',
-      }}
-    >
-      {button.icon} {button.text}
-    </button>
-  ))}
-</div>
+        {/* Buttons on the right side */}
+        <div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 translate-x-20 right-4 mr-24">
+          {sectionButtons.slice(3).map((button, index) => (
+            <button
+              key={button.id}
+              onClick={() => scrollToSection(button.id)}
+              className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
+              style={{
+                transition: 'transform 0.5s ease',
+              }}
+            >
+              {button.icon} {button.text}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
