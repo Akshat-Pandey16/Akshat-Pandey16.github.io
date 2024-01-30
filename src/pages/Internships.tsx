@@ -83,6 +83,10 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
   );
 };
 
+const transitionStyles = {
+  transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
+};
+
 const Internships: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState<PopupContentProps | null>(null);
@@ -112,9 +116,7 @@ const Internships: React.FC = () => {
   return (
     <div
       id="internships"
-      className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`}
-    >
-      <Navbar />
+      className={`flex flex-col border-y-2 ${border} items-center justify-center min-h-screen ${background} relative`} style={transitionStyles}>
       <div className={`flex flex-box justify-center items-center absolute top-16 left-24`}>
         <h1 className={`b ${headingText} text-8xl mt-10`}>Internships.</h1>
       </div>
