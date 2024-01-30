@@ -25,8 +25,6 @@ const ScrollListener: React.FC<ScrollListenerProps> = ({ onScroll }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, [onScroll]);
-
-  // Return an empty fragment as required by React.FC
   return <></>;
 };
 
