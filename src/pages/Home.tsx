@@ -51,60 +51,62 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div
-      id="home"
-      className={`relative flex flex-col items-center justify-end h-screen ${border} ${background} border-b-4 ${text}`}
-      style={{
-        transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
-      }}
-    >
-      <Switcher position="center" />
-      <img src={isDarkMode ? DHome : LHome} alt="Img" className="h-5/6 z-20"/>
-
+    <>
       <div
-        className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}
+        id="home"
+        className={`relative flex flex-col items-center justify-end h-screen ${border} ${background} border-b-4 ${text}`}
         style={{
-          transition: 'transform 0.5s ease',
+          transition: 'background 0.5s ease, color 0.5s ease, border 0.5s ease',
         }}
       >
-        <h2 className={`title text-9xl tracking-widest ${accentText}`}>
-          <span className="mr-12">//AKSHAT</span>
-          <span className="ml-12">PANDEY//</span>
-        </h2>
-      </div>
+        <Switcher position="center" />
+        <img src={isDarkMode ? DHome : LHome} alt="Img" className="h-5/6 z-20" loading="lazy" />
 
-      {/* Buttons on the left side */}
-      <div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 -translate-x-20 left-4 ml-24">
-        {sectionButtons.slice(0, 3).map((button, index) => (
-          <button
-            key={button.id}
-            onClick={() => scrollToSection(button.id)}
-            className={`mb-14 ${index === 0 || index === 2 ? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
-            style={{
-              transition: 'transform 0.5s ease',
-            }}
-          >
-            {button.icon} {button.text}
-          </button>
-        ))}
-      </div>
+        <div
+          className={`absolute top-[13%] text-center z-10 transition-transform transform-gpu ${text}`}
+          style={{
+            transition: 'transform 0.5s ease',
+          }}
+        >
+          <h2 className={`title text-9xl tracking-widest ${accentText}`}>
+            <span className="mr-12">//AKSHAT</span>
+            <span className="ml-12">PANDEY//</span>
+          </h2>
+        </div>
 
-      {/* Buttons on the right side */}
-      <div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 translate-x-20 right-4 mr-24">
-        {sectionButtons.slice(3).map((button, index) => (
-          <button
-            key={button.id}
-            onClick={() => scrollToSection(button.id)}
-            className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
-            style={{
-              transition: 'transform 0.5s ease',
-            }}
-          >
-            {button.icon} {button.text}
-          </button>
-        ))}
+        {/* Buttons on the left side */}
+        <div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 -translate-x-20 left-4 ml-24">
+  {sectionButtons.slice(0, 3).map((button, index) => (
+    <button
+      key={button.id}
+      onClick={() => scrollToSection(button.id)}
+      className={`mb-14 ${index === 0 || index === 2 ? 'translate-x-24' : 'translate-x-10'} ${commonButtonClass}`}
+      style={{
+        transition: 'transform 0.5s ease',
+      }}
+    >
+      {button.icon} {button.text}
+    </button>
+  ))}
+</div>
+
+{/* Buttons on the right side */}
+<div className="b absolute top-1/2 flex flex-col items-center transform -translate-y-10 translate-x-20 right-4 mr-24">
+  {sectionButtons.slice(3).map((button, index) => (
+    <button
+      key={button.id}
+      onClick={() => scrollToSection(button.id)}
+      className={`mb-14 ${index === 0 || index === 2 ? '-translate-x-24' : '-translate-x-10'} ${commonButtonClass}`}
+      style={{
+        transition: 'transform 0.5s ease',
+      }}
+    >
+      {button.icon} {button.text}
+    </button>
+  ))}
+</div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ export const getHomeColors = (isDarkMode: boolean) => {
          border: isDarkMode ? 'border-green-300' : 'border-emerald-400',
          background: isDarkMode ? 'bg-zinc-900' : 'bg-emerald-50',
          text: isDarkMode ? 'text-gray-700' : 'text-gray-800',
-         accentText: isDarkMode ? 'text-emerald-300' : 'text-green-600',
+         accentText: isDarkMode ? 'text-emerald-300' : 'text-green-400',
          hoverBackground: 'hover:bg-white',
          hoverText: 'hover:text-green-400',
          hoverBorder: isDarkMode ? 'hover:border-white' : 'hover:border-white',
