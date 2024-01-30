@@ -5,7 +5,6 @@ import LIntern1 from '../assets/Light/Internships1.webp';
 import DIntern1 from '../assets/Dark/Internships1.webp';
 import SAIL from '../assets/internships/SAIL.png';
 import DRDO from '../assets/internships/DRDO.png';
-import Navbar from '../components/Navbar';
 import { useDarkMode } from '../components/DarkMode';
 import { getInternshipsColors } from '../components/Color';
 
