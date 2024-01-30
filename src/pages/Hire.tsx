@@ -37,7 +37,7 @@ const Hire: React.FC = () => {
       </div>
       <div className={`z-50 rounded-2xl ${contentBackground} ${contentborder} ${shadow} border-2 p-4 flex flex-box justify-center items-center absolute bottom-16 right-24 max-w-[900px]`} style={transitionStyles}>
         <p className={`text-3xl text-justify ${contentText}`}>
-          This complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
+          Though I'm primarily a Backend Developer, this complete SPA (Single Page Application) is built by me on React + Typescript, which I learned as I built this website, along with Tailwindcss. Also learned figma to design this website. So that must give you a brief description of my ability to learn new technology as and when needed or my personal and buisness growth. 
           <br/>Yes, this paragraph is shifted to the right and I am not sure why I did that. But I am sure I can shift your business in the right direction! <br/>(This line was definitely not written by ChatGPT)
         </p>
       </div>

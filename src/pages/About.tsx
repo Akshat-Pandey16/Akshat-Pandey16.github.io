@@ -58,7 +58,7 @@ const About: React.FC = () => {
         }}
       >
         <p className={aboutTextClass}>
-        Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words.
+        Lorem ipsum dolor sit amet cons... Got you. I am a 22-year-old Backend Developer who is currently pursuing his Bachelors in Computer Science and Engineering at Bhilai Institute of Technology, Durg. I am a self + teacher taught developer who is always looking for new opportunities to learn and grow. I am a quick learner and a team player and other cherry-picked words.
           I am probably a good developer and not so good designer. I have been involved in various projects and hackathons, winning one of these, and leading in many, to give a hint of leadership to the reader. I don't shy away from making use of AI tools to take help and accomplish tasks. <br/><br/>I hope this single-page website would be a testament to my skills and abilities. Enjoy your stay here!<br/> <br/>
           <br/>P.S. We can talk about my weird font choice and color scheme in the interviews.
         </p>
