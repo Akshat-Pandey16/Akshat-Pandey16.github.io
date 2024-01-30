@@ -91,6 +91,7 @@ body {
   /* styles.css */
 /* Light Mode Styles */
 body {
+    user-select: none;
     --scrollbar-track-color: #ffffff;
     --scrollbar-thumb-color: #93ffc3;
   }
