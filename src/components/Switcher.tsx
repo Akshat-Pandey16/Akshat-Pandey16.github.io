@@ -25,12 +25,12 @@ const Switcher: React.FC<SwitcherProps> = ({ position }) => {
     <label className={`absolute top-5 ${switcherPositionClass()}`}>
       <div
         onClick={toggleDarkMode}
-        className={`relative flex items-center justify-between w-20 h-9 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
-          isDarkMode ? 'bg-gray-800' : 'bg-green-200'
+        className={`relative flex items-center justify-between w-20 h-9 shadow-inner shadow-gray-800 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
+          isDarkMode ? 'bg-gray-600' : 'bg-green-300'
         }`}
       >
         <div
-          className="flex items-center justify-center w-10 h-10 p-1 bg-white rounded-full transition-transform duration-300 ease-in-out transform"
+          className={'flex items-center justify-center w-10 h-10 p-1 bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out transform'}
           style={{ transform: isDarkMode ? 'translateX(100%)' : 'translateX(0)' }}
         >
           {isDarkMode ? <FaMoon className="text-gray-600" /> : <FaSun className="text-yellow-500" />}

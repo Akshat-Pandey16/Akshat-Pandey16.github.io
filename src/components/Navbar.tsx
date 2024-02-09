@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
     <>
       <ScrollListener onScroll={handleScroll} />
       {showNavbar && (
-        <nav className={`fixed top-1 left-10 w-full bg-transparent z-50 ${text}`}>
+        <nav className={`fixed top-1 left-10 w-full z-50 ${text}`}>
           <div className="container mx-auto flex justify-between items-center py-3">
             <div className="flex items-center">
               <button
