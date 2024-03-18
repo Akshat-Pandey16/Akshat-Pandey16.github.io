@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
   };
 
   const boxesData = [
-    { icon: <FaFileDownload />, text: 'Download Resume', link: 'https://drive.google.com/file/d/1xroePlfuRA74yIozn3-nwg-p4wMXZfrL/view?usp=sharing' },
+    { icon: <FaFileDownload />, text: 'Download Resume', link: 'https://drive.google.com/file/d/1AB5wbR75BfJ3VMbgNqaa94Rv9sGOf53-/view?usp=drivesdk' },
     { icon: <FaGithub />, text: 'Github', link: 'https://github.com/Akshat-Pandey16' },
     { icon: <FaLinkedin />, text: 'LinkedIn', link: 'https://www.linkedin.com/in/akshat16pandey/' },
     { icon: <FaEnvelope />, text: 'Email', link: 'mailto:akshat16pandey@gmail.com' },
